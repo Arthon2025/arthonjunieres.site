@@ -6,31 +6,80 @@
     <title>Arthon Junieres | Profissional em Gestão de Estoques e Logística</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --secondary: #8b5cf6;
+            --dark: #0f172a;
+            --light: #f1f5f9;
+            --accent: #06b6d4;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
         
         body {
-            font-family: 'Space Grotesk', sans-serif;
-            background-color: #0f172a;
-            color: #e2e8f0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
             overflow-x: hidden;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+        
+        body.light-mode {
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        
+        body.light-mode .card {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        body.light-mode .timeline-item::before {
+            border: 3px solid #f8fafc;
+        }
+        
+        body.light-mode .nav-link {
+            color: #1e293b;
+        }
+        
+        body.light-mode .mobile-menu {
+            background: rgba(248, 250, 252, 0.95);
         }
         
         .gradient-text {
-            background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
         
-        .glow-card {
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
-            transition: all 0.3s ease;
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
         }
         
-        .glow-card:hover {
-            box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
-            transform: translateY(-5px);
+        .card {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+        
+        .timeline-item {
+            position: relative;
         }
         
         .timeline-item::before {
@@ -41,423 +90,832 @@
             width: 16px;
             height: 16px;
             border-radius: 50%;
-            background: #38bdf8;
-            border: 3px solid #0f172a;
-        }
-        
-        .typewriter {
-            overflow: hidden;
-            border-right: .15em solid #38bdf8;
-            white-space: nowrap;
-            margin: 0 auto;
-            letter-spacing: .15em;
-            animation: 
-                typing 3.5s steps(40, end),
-                blink-caret .75s step-end infinite;
-        }
-        
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: #38bdf8 }
-        }
-        
-        /* New Background Animation */
-        @keyframes move {
-            100% {
-                transform: translate3d(0, 0, 1px) rotate(360deg);
-            }
-        }
-        .background {
-            position: fixed;
-            width: 100vw;
-            height: 100vh;
-            top: 0;
-            left: 0;
-            background: #01142d;
-            overflow: hidden;
-            z-index: -1;
-        }
-        .background span {
-            width: 1vmin;
-            height: 1vmin;
-            border-radius: 1vmin;
-            backface-visibility: hidden;
-            position: absolute;
-            animation: move;
-            animation-duration: 38s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-        }
-        .background span:nth-child(0) {
-            color: #ffffff;
-            top: 40%;
-            left: 97%;
-            animation-duration: 108s;
-            animation-delay: -108s;
-            transform-origin: 2vw -9vh;
-            box-shadow: -2vmin 0 1.046987657006821vmin currentColor;
-        }
-        .background span:nth-child(1) {
-            color: #ffffff;
-            top: 14%;
-            left: 44%;
-            animation-duration: 10s;
-            animation-delay: -108s;
-            transform-origin: -24vw -11vh;
-            box-shadow: 2vmin 0 1.1857876370827278vmin currentColor;
-        }
-        .background span:nth-child(2) {
-            color: #ffffff;
-            top: 69%;
-            left: 84%;
-            animation-duration: 98s;
-            animation-delay: -14s;
-            transform-origin: 23vw 11vh;
-            box-shadow: -2vmin 0 1.0274418010195858vmin currentColor;
-        }
-        .background span:nth-child(3) {
-            color: #ffffff;
-            top: 7%;
-            left: 83%;
-            animation-duration: 99s;
-            animation-delay: -77s;
-            transform-origin: 24vw 10vh;
-            box-shadow: -2vmin 0 0.6045572817313454vmin currentColor;
-        }
-        .background span:nth-child(4) {
-            color: #105065;
-            top: 66%;
-            left: 72%;
-            animation-duration: 50s;
-            animation-delay: -87s;
-            transform-origin: -6vw 16vh;
-            box-shadow: 2vmin 0 1.1399898888734796vmin currentColor;
-        }
-        .background span:nth-child(5) {
-            color: #ffffff;
-            top: 29%;
-            left: 24%;
-            animation-duration: 21s;
-            animation-delay: -80s;
-            transform-origin: -9vw -13vh;
-            box-shadow: -2vmin 0 1.1579619180685317vmin currentColor;
-        }
-        .background span:nth-child(6) {
-            color: #ffffff;
-            top: 18%;
-            left: 76%;
-            animation-duration: 62s;
-            animation-delay: -117s;
-            transform-origin: -5vw 24vh;
-            box-shadow: -2vmin 0 0.408968775256104vmin currentColor;
-        }
-        .background span:nth-child(7) {
-            color: #ffffff;
-            top: 99%;
-            left: 64%;
-            animation-duration: 75s;
-            animation-delay: -62s;
-            transform-origin: 1vw -4vh;
-            box-shadow: -2vmin 0 0.6883345360919756vmin currentColor;
-        }
-        .background span:nth-child(8) {
-            color: #ffffff;
-            top: 69%;
-            left: 81%;
-            animation-duration: 79s;
-            animation-delay: -97s;
-            transform-origin: 21vw 16vh;
-            box-shadow: -2vmin 0 0.5201533350104655vmin currentColor;
-        }
-        .background span:nth-child(9) {
-            color: #ffffff;
-            top: 31%;
-            left: 20%;
-            animation-duration: 34s;
-            animation-delay: -28s;
-            transform-origin: 20vw 14vh;
-            box-shadow: -2vmin 0 0.2516220968854621vmin currentColor;
-        }
-        .background span:nth-child(10) {
-            color: #ffffff;
-            top: 29%;
-            left: 3%;
-            animation-duration: 42s;
-            animation-delay: -22s;
-            transform-origin: 12vw -1vh;
-            box-shadow: -2vmin 0 0.6000631542673763vmin currentColor;
-        }
-        .background span:nth-child(11) {
-            color: #105065;
-            top: 7%;
-            left: 7%;
-            animation-duration: 27s;
-            animation-delay: -88s;
-            transform-origin: -4vw 23vh;
-            box-shadow: -2vmin 0 0.7450953578806827vmin currentColor;
-        }
-        .background span:nth-child(12) {
-            color: #105065;
-            top: 70%;
-            left: 66%;
-            animation-duration: 42s;
-            animation-delay: -117s;
-            transform-origin: 4vw -8vh;
-            box-shadow: 2vmin 0 0.9929298736789632vmin currentColor;
-        }
-        .background span:nth-child(13) {
-            color: #105065;
-            top: 46%;
-            left: 32%;
-            animation-duration: 58s;
-            animation-delay: -104s;
-            transform-origin: -11vw 11vh;
-            box-shadow: 2vmin 0 0.7418273137164745vmin currentColor;
-        }
-        .background span:nth-child(14) {
-            color: #105065;
-            top: 60%;
-            left: 42%;
-            animation-duration: 6s;
-            animation-delay: -77s;
-            transform-origin: -1vw 11vh;
-            box-shadow: -2vmin 0 1.2010194315933642vmin currentColor;
-        }
-        .background span:nth-child(15) {
-            color: #ffffff;
-            top: 11%;
-            left: 93%;
-            animation-duration: 125s;
-            animation-delay: -16s;
-            transform-origin: -23vw 0vh;
-            box-shadow: 2vmin 0 0.35466544337690686vmin currentColor;
-        }
-        .background span:nth-child(16) {
-            color: #105065;
-            top: 1%;
-            left: 5%;
-            animation-duration: 66s;
-            animation-delay: -3s;
-            transform-origin: 22vw 4vh;
-            box-shadow: 2vmin 0 0.4637587414115186vmin currentColor;
-        }
-        .background span:nth-child(17) {
-            color: #ffffff;
-            top: 38%;
-            left: 44%;
-            animation-duration: 68s;
-            animation-delay: -96s;
-            transform-origin: -12vw 23vh;
-            box-shadow: -2vmin 0 1.0333334227044624vmin currentColor;
+            background: var(--primary);
+            border: 3px solid var(--dark);
+            z-index: 2;
         }
         
         .skill-bar {
-            height: 8px;
-            border-radius: 4px;
-            background: #1e293b;
+            height: 10px;
+            border-radius: 5px;
+            background: rgba(30, 41, 59, 0.5);
             overflow: hidden;
         }
         
         .skill-progress {
             height: 100%;
-            background: linear-gradient(90deg, #38bdf8, #818cf8);
-            transition: width 1.5s ease;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 5px;
+            transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: white;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+            transition: all 0.5s ease;
+            z-index: -1;
+        }
+        
+        .btn-primary:hover::before {
+            width: 100%;
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        
+        .btn-outline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: var(--primary);
+            transition: all 0.5s ease;
+            z-index: -1;
+            opacity: 0.1;
+        }
+        
+        .btn-outline:hover {
+            color: white;
+        }
+        
+        .btn-outline:hover::before {
+            width: 100%;
+            opacity: 1;
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            height: 100vh;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            transition: all 0.5s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .mobile-menu.active {
+            right: 0;
+        }
+        
+        .floating {
+            animation: floating 4s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        
+        .blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.15;
+            z-index: -1;
+            animation: blob-animation 15s infinite alternate;
+        }
+        
+        @keyframes blob-animation {
+            0% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(100px, -100px) scale(1.2); }
+            66% { transform: translate(-100px, 100px) scale(0.8); }
+            100% { transform: translate(0, 0) scale(1); }
+        }
+        
+        .cursor-glow {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, rgba(15, 23, 42, 0) 70%);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            transition: all 0.1s ease;
+            opacity: 0;
+        }
+        
+        .cursor-glow.active {
+            opacity: 1;
+        }
+        
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            z-index: 9999;
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+            outline: none;
+        }
+        
+        /* Novo estilo para melhorar visibilidade dos campos */
+        .contact-form input,
+        .contact-form textarea,
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            background-color: rgba(15, 23, 42, 0.7);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Estilo para o modo claro */
+        body.light-mode .contact-form input,
+        body.light-mode .contact-form textarea,
+        body.light-mode input[type="text"],
+        body.light-mode input[type="email"],
+        body.light-mode textarea {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #1e293b;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Estilo para placeholder */
+        ::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        body.light-mode ::placeholder {
+            color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .contact-form label {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-form input:focus + label,
+        .contact-form textarea:focus + label {
+            color: var(--primary);
+        }
+        
+        /* Preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        
+        .preloader.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .loader {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-top-color: var(--primary);
+            animation: spin 1s infinite linear;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Typing Animation - Nova versão */
+        .typewriter-container {
+            position: relative;
+            height: auto;
+            min-height: 40px;
+            overflow: visible;
+        }
+        
+        .typewriter-container h2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .typewriter-container h2.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .typewriter-container h2.fade-out {
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        
+        /* Ajuste do contêiner para melhor visualização */
+        .typewriter-wrapper {
+            position: relative;
+            height: 40px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 99;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Portfolio Gallery */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+        
+        /* Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 99;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            transform: rotate(45deg);
+        }
+        
+        /* Swiper Styles */
+        .swiper {
+            width: 100%;
+            padding-bottom: 50px;
+        }
+        
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 400px;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .swiper-pagination-bullet {
+            background: var(--primary);
+        }
+        
+        /* Ajustes de tamanho de fonte */
+        h1.gradient-text {
+            font-size: 4.5rem; /* Tamanho para desktop */
+        }
+        
+        .typewriter-container h2 {
+            font-size: 2rem; /* Tamanho para desktop */
+        }
+        
+        p.text-lg {
+            font-size: 1.25rem; /* Tamanho para desktop */
+            line-height: 1.6;
+        }
+        
+        /* Ajuste para o contêiner de typewriter */
+        .typewriter-wrapper {
+            height: 50px;
+            margin-bottom: 25px;
+        }
+        
+        /* Ajustes específicos para mobile */
+        @media (max-width: 768px) {
+            h1.gradient-text {
+                font-size: 2.5rem !important;
+            }
+            
+            .typewriter-container h2 {
+                font-size: 1.5rem !important;
+            }
+            
+            p.text-lg {
+                font-size: 1rem !important;
+                line-height: 1.5;
+            }
+            
+            .typewriter-wrapper {
+                height: 40px;
+                margin-bottom: 20px;
+            }
+            
+            /* Melhorar visualização em telas pequenas */
+            .container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+        
+        /* Ajuste para botões menores */
+        .btn-primary, .btn-outline {
+            padding: 0.5rem 1.25rem !important; /* Reduzido de px-8 py-4 */
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Ajuste para ícones nos botões */
+        .btn-primary i, .btn-outline i {
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        /* Melhorar espaçamento entre botões */
+        .flex.flex-wrap.gap-4 {
+            gap: 0.75rem !important;
+        }
+        
+        /* Melhorar margens laterais e centralização */
+        .container {
+            width: 85%;  /* Aumentado para melhor visualização */
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;  /* Em telas menores, usa mais espaço */
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+        
+        /* Centralização adicional para seções */
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        /* Centralização para dispositivos móveis */
+        @media (max-width: 768px) {
+            .text-center-mobile {
+                text-align: center;
+            }
+            
+            .flex-center-mobile {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .flex.flex-wrap.gap-4 {
+                justify-content: center;
+            }
+        }
+        
+        /* Ajuste para a seção hero */
+        #sobre .grid {
+            justify-content: center;
+        }
+        
+        /* Centralizar conteúdo de texto */
+        .hero-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Ajuste para o contêiner de typewriter para acomodar texto maior */
+        .typewriter-wrapper {
+            height: 50px; /* Aumentado de 40px */
+            margin-bottom: 25px; /* Aumentado de 20px */
+        }
+        
+        /* Ajuste para melhor espaçamento entre elementos */
+        .hero-content h1 {
+            margin-bottom: 1.5rem; /* Aumentado para melhor espaçamento */
+        }
+        
+        /* Ajuste para melhor visualização em dispositivos móveis - mantendo altura */
+        @media (max-width: 768px) {
+            .typewriter-wrapper {
+                height: 50px; /* Mantido igual ao desktop */
+                margin-bottom: 25px; /* Mantido igual ao desktop */
+            }
         }
     </style>
 </head>
-<body class="min-h-screen">
-    <!-- New Background Animation -->
-    <div class="background">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
     </div>
     
-    <!-- Main Container -->
-    <div class="container mx-auto px-4 py-12 max-w-6xl">
-        <!-- Header Section -->
-        <header class="flex flex-col md:flex-row items-center justify-between mb-16">
-            <div class="md:w-1/2 mb-8 md:mb-0">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-text">Arthon Junieres</h1>
-                <h2 class="text-xl md:text-2xl font-medium text-slate-300 mb-6 typewriter">Analista de Logística e Inventário</h2>
-                <p class="text-slate-400 mb-8 leading-relaxed">
-                    Especialista em gestão de materiais, controle de inventários e otimização de processos logísticos. 
-                    Domínio em Excel  e Power BI para análise de dados e criação de dashboards estratégicos.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="mailto:arthonjuny@gmail.com" class="px-6 py-3 bg-sky-500 hover:bg-sky-600 rounded-full font-medium transition-all flex items-center">
-                        <i class="fas fa-envelope mr-2"></i> Email
-                    </a>
-                    <a href="https://linkedin.com/in/arthonjunieres" target="_blank" class="px-6 py-3 border border-sky-500 text-sky-400 hover:bg-sky-900/30 rounded-full font-medium transition-all flex items-center">
-                        <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
-                    </a>
-                    <a href="tel:+5586995137002" class="px-6 py-3 border border-sky-500 text-sky-400 hover:bg-sky-900/30 rounded-full font-medium transition-all flex items-center">
-                        <i class="fas fa-phone mr-2"></i> (86) 99513-7002
-                    </a>
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow"></div>
+    
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator"></div>
+    
+    <!-- Background Blobs -->
+    <div class="blob" style="top: 10%; left: 10%;"></div>
+    <div class="blob" style="bottom: 20%; right: 10%;"></div>
+    <div class="blob" style="top: 50%; left: 50%;"></div>
+    
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+    
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button id="close-menu" class="absolute top-8 right-8 text-3xl">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="flex flex-col space-y-8 items-center text-xl">
+            <a href="#sobre" class="nav-link mobile-link">Sobre</a>
+            <a href="#experiencia" class="nav-link mobile-link">Experiência</a>
+            <a href="#habilidades" class="nav-link mobile-link">Habilidades</a>
+            <a href="#formacao" class="nav-link mobile-link">Formação</a>
+            <a href="#certificacoes" class="nav-link mobile-link">Certificações</a>
+            <a href="#contato" class="nav-link mobile-link">Contato</a>
+        </div>
+        <div class="mt-12 flex space-x-4">
+            <a href="https://linkedin.com/in/arthonjunieres" target="_blank" class="text-2xl text-blue-400 hover:text-blue-300 transition-colors">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:arthonjuny@gmail.com" class="text-2xl text-blue-400 hover:text-blue-300 transition-colors">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+5586995137002" class="text-2xl text-blue-400 hover:text-blue-300 transition-colors">
+                <i class="fas fa-phone"></i>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-3xl font-bold gradient-text"></a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#sobre" class="nav-link">Sobre</a>
+                    <a href="#experiencia" class="nav-link">Experiência</a>
+                    <a href="#habilidades" class="nav-link">Habilidades</a>
+                    <a href="#formacao" class="nav-link">Formação</a>
+                    <a href="#certificacoes" class="nav-link">Certificações</a>
+                    <a href="#contato" class="nav-link">Contato</a>
+                </div>
+                <button id="menu-toggle" class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="sobre" class="min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-duration="1000" class="text-center-mobile">
+                    <div class="hero-content">
+                        <h1 class="text-5xl md:text-7xl font-bold mb-6 gradient-text">Arthon Junieres</h1>
+                        <div class="typewriter-wrapper">
+                            <div class="typewriter-container">
+                                <h2 class="text-2xl md:text-3xl font-medium text-slate-300">Analista de Logística</h2>
+                                <h2 class="text-2xl md:text-3xl font-medium text-slate-300">Especialista em Inventário</h2>
+                                <h2 class="text-2xl md:text-3xl font-medium text-slate-300">Gestor de Estoques</h2>
+                            </div>
+                        </div>
+                        <p class="text-slate-400 mb-8 leading-relaxed text-lg">
+                            Especialista em gestão de materiais, controle de inventários e otimização de processos logísticos. 
+                            Domínio em Excel e Power BI para análise de dados e criação de dashboards estratégicos.
+                        </p>
+                        <div class="flex flex-wrap gap-4 justify-center">
+                            <a href="mailto:arthonjuny@gmail.com" class="rounded-full font-medium btn-primary flex items-center">
+                                <i class="fas fa-envelope"></i> Email
+                            </a>
+                            <a href="https://linkedin.com/in/arthonjunieres" target="_blank" class="rounded-full font-medium btn-outline flex items-center">
+                                <i class="fab fa-linkedin-in"></i> LinkedIn
+                            </a>
+                            <a href="tel:+5586995137002" class="rounded-full font-medium btn-outline flex items-center">
+                                <i class="fas fa-phone"></i> (86) 99513-7002
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" class="flex justify-center">
+                    <div class="relative floating">
+                        <div class="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-blue-500/30 relative card">
+                            <img src="https://i.postimg.cc/0NMGQVRW/perfil-profissional.jpg"
+                                 alt="Arthon Junieres"
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 card px-6 py-3 rounded-lg shadow-lg">
+                            <span class="text-blue-400 font-bold">Piripiri, PI</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="md:w-1/2 flex justify-center">
-                <div class="relative floating-box">
-                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-sky-500/30 relative glow-card">
-                        <img src="https://i.postimg.cc/0NMGQVRW/perfil-profissional.jpg"
-                             alt="Arthon Junieres"
-                             class="w-full h-full object-cover">
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="100">
+                    <h3 class="text-slate-400 text-sm mb-2">Experiência</h3>
+                    <div class="counter" data-target="3">
+                        <p class="text-4xl font-bold text-blue-400">0+</p>
                     </div>
-                    <div class="absolute -bottom-6 -right-6 bg-slate-800 px-4 py-2 rounded-lg border border-slate-700 shadow-lg">
-                        <span class="text-sky-400 font-bold">Piripiri, PI</span>
+                    <p class="text-sm text-slate-500 mt-2">anos de atuação</p>
+                </div>
+                <div class="card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="200">
+                    <h3 class="text-slate-400 text-sm mb-2">Certificações</h3>
+                    <div class="counter" data-target="5">
+                        <p class="text-4xl font-bold text-blue-400">0+</p>
                     </div>
+                    <p class="text-sm text-slate-500 mt-2">especializações</p>
+                </div>
+                <div class="card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="300">
+                    <h3 class="text-slate-400 text-sm mb-2">Formação</h3>
+                    <div class="counter" data-target="2">
+                        <p class="text-4xl font-bold text-blue-400">0</p>
+                    </div>
+                    <p class="text-sm text-slate-500 mt-2">cursos técnicos</p>
+                </div>
+                <div class="card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="400">
+                    <h3 class="text-slate-400 text-sm mb-2">CNH</h3>
+                    <p class="text-4xl font-bold text-blue-400">AB</p>
+                    <p class="text-sm text-slate-500 mt-2">habilitação</p>
                 </div>
             </div>
-        </header>
-        
-        <!-- Stats Section -->
-        <section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-            <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
-                <h3 class="text-slate-400 text-sm mb-2">Experiência</h3>
-                <p class="text-3xl font-bold text-sky-400">3+ anos</p>
-            </div>
-            <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
-                <h3 class="text-slate-400 text-sm mb-2">Certificações</h3>
-                <p class="text-3xl font-bold text-sky-400">5+</p>
-            </div>
-            <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
-                <h3 class="text-slate-400 text-sm mb-2">Formação</h3>
-                <p class="text-3xl font-bold text-sky-400">2</p>
-            </div>
-            <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
-                <h3 class="text-slate-400 text-sm mb-2">CNH</h3>
-                <p class="text-3xl font-bold text-sky-400">AB</p>
-            </div>
-        </section>
-        
-        <!-- Skills Section -->
-        <section class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 gradient-text text-center">Principais Competências</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
-                    <div class="flex items-center mb-4">
-                        <div class="text-sky-400 text-2xl mr-3">
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="habilidades" class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 gradient-text text-center" data-aos="fade-up">Principais Competências</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card p-8 rounded-xl" data-aos="fade-right">
+                    <div class="flex items-center mb-6">
+                        <div class="text-blue-400 text-3xl mr-4">
                             <i class="fas fa-boxes"></i>
                         </div>
-                        <h3 class="text-xl font-bold">Gestão de Estoques</h3>
+                        <h3 class="text-2xl font-bold">Gestão de Estoques</h3>
                     </div>
-                    <div class="space-y-3">
+                    <div class="space-y-6">
                         <div>
-                            <div class="flex justify-between mb-1">
+                            <div class="flex justify-between mb-2">
                                 <span class="text-slate-400">Controle de Inventário</span>
-                                <span class="text-sky-400"></span>
+                                <span class="text-blue-400">95%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
+                                <div class="skill-progress" style="width: 0%;" data-width="95%"></div>
                             </div>
                         </div>
                         <div>
-                            <div class="flex justify-between mb-1">
+                            <div class="flex justify-between mb-2">
                                 <span class="text-slate-400">Análise de Dados</span>
-                <span class="text-sky-400"></span>
+                                <span class="text-blue-400">90%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
+                                <div class="skill-progress" style="width: 0%;" data-width="90%"></div>
                             </div>
                         </div>
                         <div>
-                            <div class="flex justify-between mb-1">
+                            <div class="flex justify-between mb-2">
                                 <span class="text-slate-400">Processos Logísticos</span>
-                                <span class="text-sky-400"></span>
+                                <span class="text-blue-400">85%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
+                                <div class="skill-progress" style="width: 0%;" data-width="85%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
-                    <div class="flex items-center mb-4">
-                        <div class="text-sky-400 text-2xl mr-3">
+                <div class="card p-8 rounded-xl" data-aos="fade-left">
+                    <div class="flex items-center mb-6">
+                        <div class="text-blue-400 text-3xl mr-4">
                             <i class="fas fa-laptop-code"></i>
                         </div>
-                        <h3 class="text-xl font-bold">Ferramentas Tecnológicas</h3>
+                        <h3 class="text-2xl font-bold">Ferramentas Tecnológicas</h3>
                     </div>
-                    <div class="space-y-3">
+                    <div class="space-y-6">
                         <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-slate-400">Excel </span>
-                                <span class="text-sky-400"></span>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-slate-400">Excel</span>
+                                <span class="text-blue-400">95%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
+                                <div class="skill-progress" style="width: 0%;" data-width="95%"></div>
                             </div>
                         </div>
                         <div>
-                            <div class="flex justify-between mb-1">
+                            <div class="flex justify-between mb-2">
                                 <span class="text-slate-400">Power BI</span>
-                                <span class="text-sky-400"></span>
+                                <span class="text-blue-400">85%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
+                                <div class="skill-progress" style="width: 0%;" data-width="85%"></div>
                             </div>
                         </div>
                         <div>
-                            <div class="flex justify-between mb-1">
+                            <div class="flex justify-between mb-2">
                                 <span class="text-slate-400">AutoCAD</span>
-                                <span class="text-sky-400"></span>
+                                <span class="text-blue-400">75%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
+                                <div class="skill-progress" style="width: 0%;" data-width="75%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <!-- Experience Section -->
-        <section class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 gradient-text text-center">Experiência Profissional</h2>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experiencia" class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 gradient-text text-center" data-aos="fade-up">Experiência Profissional</h2>
             <div class="relative">
                 <div class="absolute left-8 md:left-1/2 h-full w-0.5 bg-slate-700"></div>
                 
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- Left Side Items -->
                     <div class="md:mr-auto md:pr-16 md:text-right">
-                        <div class="relative pl-12 md:pl-0 md:pr-12 timeline-item mb-8">
-                            <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
-                                <h3 class="font-bold text-lg text-sky-400 mb-2">Analista de Logística</h3>
-                                <p class="text-sm text-slate-400 mb-2">Infotec Brasil | Fev 2024 - Atual</p>
-                                <ul class="text-slate-300 list-disc list-inside space-y-1">
+                        <div class="relative pl-12 md:pl-0 md:pr-12 timeline-item mb-12" data-aos="fade-right">
+                            <div class="card p-8 rounded-xl hover:border-blue-500/30">
+                                <h3 class="font-bold text-xl text-sky-400 mb-2">Analista de Logística</h3>
+                                <p class="text-sm text-slate-400 mb-4">Infotec Brasil | Fev 2024 - Atual</p>
+                                <ul class="text-slate-300 list-disc list-inside space-y-2">
                                     <li>Planejamento e coordenação de atividades logísticas</li>
-                                    <li>Otimização de processos e redução de custos</li>
+                                    <li>Otimização de
                                     <li>Interface com fornecedores e clientes</li>
                                 </ul>
                             </div>
                         </div>
                         
-                        <div class="relative pl-12 md:pl-0 md:pr-12 timeline-item mb-8">
-                            <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
-                                <h3 class="font-bold text-lg text-sky-400 mb-2">Designer Gráfico</h3>
-                                <p class="text-sm text-slate-400 mb-2">Print Confecções LTDA | Jan 2016 - Dez 2021</p>
-                                <ul class="text-slate-300 list-disc list-inside space-y-1">
+                        <div class="relative pl-12 md:pl-0 md:pr-12 timeline-item mb-12" data-aos="fade-right" data-aos-delay="200">
+                            <div class="card p-8 rounded-xl hover:border-blue-500/30">
+                                <h3 class="font-bold text-xl text-blue-400 mb-2">Designer Gráfico</h3>
+                                <p class="text-sm text-slate-400 mb-4">Print Confecções LTDA | Jan 2016 - Dez 2021</p>
+                                <ul class="text-slate-300 list-disc md:list-none space-y-2">
                                     <li>Preparação de arquivos para impressão</li>
                                     <li>Ajuste de layouts e escolha de materiais</li>
                                     <li>Calibração de cores e acompanhamento de impressão</li>
@@ -468,11 +926,11 @@
                     
                     <!-- Right Side Items -->
                     <div class="md:ml-auto md:pl-16">
-                        <div class="relative pl-12 timeline-item mb-8">
-                            <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
-                                <h3 class="font-bold text-lg text-sky-400 mb-2">Analista de Inventário</h3>
-                                <p class="text-sm text-slate-400 mb-2">Progeo Engenharia | Dez 2022 - Jan 2024</p>
-                                <ul class="text-slate-300 list-disc list-inside space-y-1">
+                        <div class="relative pl-12 timeline-item mb-12" data-aos="fade-left" data-aos-delay="100">
+                            <div class="card p-8 rounded-xl hover:border-blue-500/30">
+                                <h3 class="font-bold text-xl text-blue-400 mb-2">Analista de Inventário</h3>
+                                <p class="text-sm text-slate-400 mb-4">Progeo Engenharia | Dez 2022 - Jan 2024</p>
+                                <ul class="text-slate-300 list-disc list-inside space-y-2">
                                     <li>Controle e acompanhamento de estoques</li>
                                     <li>Realização de inventários físicos</li>
                                     <li>Elaboração de relatórios e melhorias de processos</li>
@@ -480,11 +938,11 @@
                             </div>
                         </div>
                         
-                        <div class="relative pl-12 timeline-item">
-                            <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
-                                <h3 class="font-bold text-lg text-sky-400 mb-2">Projetista de CAD</h3>
-                                <p class="text-sm text-slate-400 mb-2">GBS Engenharia | Fev 2010 - Abr 2012</p>
-                                <ul class="text-slate-300 list-disc list-inside space-y-1">
+                        <div class="relative pl-12 timeline-item" data-aos="fade-left" data-aos-delay="300">
+                            <div class="card p-8 rounded-xl hover:border-blue-500/30">
+                                <h3 class="font-bold text-xl text-blue-400 mb-2">Projetista de CAD</h3>
+                                <p class="text-sm text-slate-400 mb-4">GBS Engenharia | Fev 2010 - Abr 2012</p>
+                                <ul class="text-slate-300 list-disc list-inside space-y-2">
                                     <li>Elaboração de desenhos técnicos</li>
                                     <li>Responsável pelos As-Builts</li>
                                     <li>Garantia de fidelidade às condições reais da obra</li>
@@ -494,160 +952,371 @@
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <!-- Education Section -->
-        <section class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 gradient-text text-center">Formação Acadêmica</h2>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="formacao" class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 gradient-text text-center" data-aos="fade-up">Formação Acadêmica</h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-slate-800/50 p-8 rounded-xl glow-card">
-                    <div class="text-sky-400 text-4xl mb-4">
+                <div class="card p-8 rounded-xl" data-aos="flip-left">
+                    <div class="text-blue-400 text-5xl mb-6">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Tecnólogo em Logística</h3>
+                    <h3 class="text-2xl font-bold mb-4">Tecnólogo em Logística</h3>
                     <p class="text-slate-400 mb-2">Faculdade Focus</p>
                     <p class="text-sm text-slate-500">Em andamento (Conclusão: Abr 2027)</p>
+                    <div class="mt-4 w-full bg-slate-700/50 h-2 rounded-full overflow-hidden">
+                        <div class="bg-blue-500 h-full rounded-full" style="width: 15%;"></div>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">15% concluído</p>
                 </div>
-                <div class="bg-slate-800/50 p-8 rounded-xl glow-card">
-                    <div class="text-sky-400 text-4xl mb-4">
+                <div class="card p-8 rounded-xl" data-aos="flip-right">
+                    <div class="text-blue-400 text-5xl mb-6">
                         <i class="fas fa-certificate"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Técnico em Eletrotécnica</h3>
+                    <h3 class="text-2xl font-bold mb-4">Técnico em Eletrotécnica</h3>
                     <p class="text-slate-400 mb-2">Instituto Daniel de La Touche</p>
                     <p class="text-sm text-slate-500">Jan 2021 - Jun 2023</p>
+                    <div class="mt-4 w-full bg-slate-700/50 h-2 rounded-full overflow-hidden">
+                        <div class="bg-blue-500 h-full rounded-full" style="width: 100%;"></div>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">100% concluído</p>
                 </div>
             </div>
-        </section>
-        
-        <!-- Certifications Section -->
-        <section class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 gradient-text text-center">Certificações</h2>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certificacoes" class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 gradient-text text-center" data-aos="fade-up">Certificações</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
-                    <div class="text-sky-400 text-2xl mb-3">
+                <div class="card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-blue-400 text-3xl mb-4">
                         <i class="fas fa-link"></i>
                     </div>
-                    <h3 class="font-bold mb-2">Cadeia de Suprimentos</h3>
-                    <p class="text-sm text-slate-400">Turma 2024A</p>
+                    <h3 class="font-bold text-xl mb-2">Cadeia de Suprimentos</h3>
+                    <p class="text-sm text-slate-400 mb-4">Turma 2024A</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="text-xs text-slate-500">2024</span>
+                        <button class="text-blue-400 hover:text-blue-300 transition-colors">
+                            <i class="fas fa-external-link-alt"></i>
+                        </button>
+                    </div>
                 </div>
-                <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
-                    <div class="text-sky-400 text-2xl mb-3">
+                <div class="card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-blue-400 text-3xl mb-4">
                         <i class="fas fa-database"></i>
                     </div>
-                    <h3 class="font-bold mb-2">Gerenciar Dados com Microsoft 365</h3>
+                    <h3 class="font-bold text-xl mb-2">
+                        Gerenciar Dados com Microsoft 365
+                    </h3>
                     <p class="text-sm text-slate-400">Certificação Profissional</p>
                 </div>
-                <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
-                    <div class="text-sky-400 text-2xl mb-3">
+                <div class="card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-blue-400 text-3xl mb-4">
                         <i class="fas fa-truck"></i>
                     </div>
-                    <h3 class="font-bold mb-2">Estratégias de Logística na Administração Pública</h3>
+                    <h3 class="font-bold text-xl mb-2">Estratégias de Logística na Administração Pública</h3>
                     <p class="text-sm text-slate-400">Certificação Profissional</p>
                 </div>
-                <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
-                    <div class="text-sky-400 text-2xl mb-3">
+                <div class="card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-blue-400 text-3xl mb-4">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="font-bold mb-2">Otimização com Microsoft 365</h3>
+                    <h3 class="font-bold text-xl mb-2">Otimização com Microsoft 365</h3>
                     <p class="text-sm text-slate-400">Certificação Profissional</p>
                 </div>
-                <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
-                    <div class="text-sky-400 text-2xl mb-3">
+                <div class="card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-blue-400 text-3xl mb-4">
                         <i class="fas fa-chart-pie"></i>
                     </div>
-                    <h3 class="font-bold mb-2">Power BI para Gestão</h3>
+                    <h3 class="font-bold text-xl mb-2">Power BI para Gestão</h3>
                     <p class="text-sm text-slate-400">Certificação Profissional</p>
                 </div>
             </div>
-        </section>
-        
-        <!-- Contact Section -->
-        <section>
-            <h2 class="text-3xl font-bold mb-8 gradient-text text-center">Entre em Contato</h2>
-            <div class="bg-slate-800/50 p-8 rounded-xl glow-card max-w-2xl mx-auto">
-                <form>
-                    <div class="grid md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label for="name" class="block text-slate-400 mb-2">Nome</label>
-                            <input type="text" id="name" class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-sky-500">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="text-4xl font-bold mb-12 text-center gradient-text">Entre em Contato</h2>
+                <div class="max-w-xl mx-auto">
+                    <div class="card p-6 md:p-8">
+                        <div class="chat-container">
+                            <div class="chat-header mb-4">
+                                <p class="text-slate-300 text-center">Envie uma mensagem direta</p>
+                            </div>
+                            <form id="chatForm" class="space-y-4">
+                                <div class="relative">
+                                    <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg" placeholder="Seu nome">
+                                </div>
+                                <div class="relative">
+                                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg" placeholder="Seu email">
+                                </div>
+                                <div class="relative">
+                                    <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-lg" placeholder="Digite sua mensagem..."></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn-primary px-6 py-3 rounded-lg w-full">
+                                        <i class="fas fa-paper-plane mr-2"></i> Enviar Mensagem
+                                    </button>
+                                </div>
+                            </form>
+                            <div id="chatResponse" class="mt-4 text-center hidden">
+                                <p class="text-green-400"><i class="fas fa-check-circle mr-2"></i> Mensagem enviada com sucesso!</p>
+                            </div>
                         </div>
-                        <div>
-                            <label for="email" class="block text-slate-400 mb-2">Email</label>
-                            <input type="email" id="email" class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-sky-500">
+                    </div>
+                    <div class="mt-8 text-center">
+                        <p class="text-slate-400">Ou entre em contato diretamente:</p>
+                        <div class="flex justify-center space-x-6 mt-4">
+                            <a href="https://wa.me/5586995137002" target="_blank" class="text-2xl text-green-400 hover:text-green-300 transition-colors">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="mailto:arthonjuny@gmail.com" class="text-2xl text-blue-400 hover:text-blue-300 transition-colors">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="tel:+5586995137002" class="text-2xl text-blue-400 hover:text-blue-300 transition-colors">
+                                <i class="fas fa-phone"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="mb-6">
-                        <label for="subject" class="block text-slate-400 mb-2">Assunto</label>
-                            <input type="text" id="subject" class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-sky-500">
-                    </div>
-                    <div class="mb-6">
-                        <label for="message" class="block text-slate-400 mb-2">Mensagem</label>
-                        <textarea id="message" rows="4" class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-sky-500"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-medium py-3 px-6 rounded-lg transition-all flex items-center justify-center">
-                        <i class="fas fa-paper-plane mr-2"></i> Enviar Mensagem
-                    </button>
-                </form>
+                </div>
             </div>
-        </section>
-    </div>
-    
-    <!-- Footer -->
-    <footer class="bg-slate-900/50 py-8 mt-16">
-        <div class="container mx-auto px-4 text-center">
-            <div class="flex justify-center space-x-6 mb-6">
-                <a href="https://linkedin.com/in/arthonjunieres" target="_blank" class="text-slate-400 hover:text-sky-400 transition-all">
-                    <i class="fab fa-linkedin-in text-xl"></i>
-                </a>
-                <a href="mailto:arthonjuny@gmail.com" class="text-slate-400 hover:text-sky-400 transition-all">
-                    <i class="fas fa-envelope text-xl"></i>
-                </a>
-                <a href="tel:+5586995137002" class="text-slate-400 hover:text-sky-400 transition-all">
-                    <i class="fas fa-phone text-xl"></i>
-                </a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="py-10 border-t border-white/10">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="text-slate-400">&copy; 2023 Arthon Junieres. Todos os direitos reservados.</p>
+                <!-- Ícones removidos daqui -->
             </div>
-            <p class="text-slate-500 text-sm">
-                © 2024 Arthon Junieres. Todos os direitos reservados.
-            </p>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
-        // Animate skill bars when they come into view
+        // Formulário de contato
+        document.getElementById('chatForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Opção 1: Enviar para o WhatsApp
+            const whatsappMessage = `Nome: ${name}%0AEmail: ${email}%0AMensagem: ${message}`;
+            window.open(`https://wa.me/5586995137002?text=${whatsappMessage}`, '_blank');
+            
+            // Opção 2: Enviar por email usando mailto
+            // Descomente esta linha se preferir o método de email
+            // window.location.href = `mailto:arthonjuny@gmail.com?subject=Contato do Site - ${name}&body=Nome: ${name}%0AEmail: ${email}%0A%0AMensagem: ${message}`;
+            
+            // Mostrar mensagem de sucesso
+            document.getElementById('chatResponse').classList.remove('hidden');
+            
+            // Limpar formulário
+            this.reset();
+            
+            // Esconder mensagem de sucesso após 5 segundos
+            setTimeout(() => {
+                document.getElementById('chatResponse').classList.add('hidden');
+            }, 5000);
+        });
+        
+        // Inicializar AOS (Animate On Scroll)
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: false,
+            mirror: true
+        });
+        
+        // Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.querySelector('.preloader');
+            setTimeout(function() {
+                preloader.classList.add('fade-out');
+            }, 500);
+        });
+        
+        // Menu Mobile
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.add('active');
+        });
+        
+        closeMenu.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+        });
+        
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+            });
+        });
+        
+        // Cursor Glow Effect
+        const cursorGlow = document.querySelector('.cursor-glow');
+        
+        document.addEventListener('mousemove', function(e) {
+            cursorGlow.style.left = e.clientX + 'px';
+            cursorGlow.style.top = e.clientY + 'px';
+            cursorGlow.classList.add('active');
+        });
+        
+        // Scroll Progress Indicator
+        window.addEventListener('scroll', function() {
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            const totalHeight = document.body.scrollHeight - window.innerHeight;
+            const progress = (window.pageYOffset / totalHeight) * 100;
+            scrollIndicator.style.width = progress + '%';
+            
+            // Back to Top Button
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('active');
+            } else {
+                backToTop.classList.remove('active');
+            }
+        });
+        
+        // Back to Top Button
+        const backToTop = document.querySelector('.back-to-top');
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Theme Toggle
+        const themeToggle = document.querySelector('.theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('light-mode');
+            
+            if (document.body.classList.contains('light-mode')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        });
+        
+        // Typewriter Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const typewriterTexts = document.querySelectorAll('.typewriter-container h2');
+            let currentIndex = 0;
+            
+            function showNextText() {
+                // Remove active class from all texts
+                typewriterTexts.forEach(text => {
+                    text.classList.remove('active');
+                    text.classList.remove('fade-out');
+                });
+                
+                // Add active class to current text
+                typewriterTexts[currentIndex].classList.add('active');
+                
+                // Set timeout for next text
+                setTimeout(() => {
+                    typewriterTexts[currentIndex].classList.add('fade-out');
+                    
+                    // Update index
+                    currentIndex = (currentIndex + 1) % typewriterTexts.length;
+                    
+                    // Show next text after fade out
+                    setTimeout(showNextText, 500);
+                }, 3000); // Exibe cada texto por 3 segundos
+            }
+            
+            // Start animation
+            if (typewriterTexts.length > 0) {
+                showNextText();
+            }
+        });
+        
+        // Counters Animation
+        const counters = document.querySelectorAll('.counter');
+        
+        function startCounters() {
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const countElement = counter.querySelector('p');
+                const increment = target / 30;
+                let count = 0;
+                
+                const updateCount = () => {
+                    if (count < target) {
+                        count += increment;
+                        countElement.textContent = Math.ceil(count) + '+';
+                        setTimeout(updateCount, 50);
+                    } else {
+                        countElement.textContent = target + '+';
+                    }
+                };
+                
+                updateCount();
+            });
+        }
+        
+        // Iniciar contadores quando estiverem visíveis
+        const observerOptions = {
+            threshold: 0.5
+        };
+        
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        const statsSection = document.querySelector('.counter').parentElement.parentElement.parentElement;
+        observer.observe(statsSection);
+        
+        // Skill Bars Animation
         const skillBars = document.querySelectorAll('.skill-progress');
         
-        const skillObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const width = entry.target.style.width;
-                    entry.target.style.width = '0';
-                    setTimeout(() => {
-                        entry.target.style.width = width;
-                    }, 100);
-                }
+        function animateSkillBars() {
+            skillBars.forEach(bar => {
+                const percentage = bar.getAttribute('data-percentage');
+                bar.style.width = percentage + '%';
             });
-        }, { threshold: 0.5 });
+        }
         
-        skillBars.forEach(bar => {
-            skillObserver.observe(bar);
-        });
-        
-        // Add animation to timeline items when they come into view
-        const timelineItems = document.querySelectorAll('.timeline-item');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        timelineItems.forEach(item => {
-            item.style.opacity = '0';
-            item.style.transform = 'translateY(20px)';
-            item.style.transition = 'all 0.6s ease';
-            observer.observe(item);
-        });
+        // Iniciar animação das barras quando estiverem visíveis
+        const skillsSection = document.getElementById('habilidades');
+        if (skillsSection) {
+            const skillsObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateSkillBars();
+                        skillsObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            skillsObserver.observe(skillsSection);
+        }
     </script>
+</body>
+</html>
