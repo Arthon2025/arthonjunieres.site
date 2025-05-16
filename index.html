@@ -554,6 +554,23 @@
                 padding-left: 10px;
                 padding-right: 10px;
             }
+            
+            /* Reordenar elementos na seção sobre para mostrar foto primeiro */
+            #sobre .grid {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            
+            #sobre .grid > div:first-child {
+                margin-top: 2rem;
+            }
+            
+            /* Centralizar a foto de perfil */
+            #sobre .grid > div:last-child {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 1.5rem;
+            }
         }
         
         /* Ajuste para botões menores */
