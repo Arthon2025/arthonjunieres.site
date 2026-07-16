@@ -1,175 +1,257 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arthon Junieres | Profissional em Gestão de Estoques e Logística</title>
+    <meta name="theme-color" content="#0b1420">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Arthon Junieres">
+
+    <title>Arthon Junieres | Tecnologia, Dados e Automação no Setor Elétrico</title>
+    <meta name="description" content="Portfólio profissional de Arthon Junieres, com projetos de análise de dados, Power BI, automação de processos, aplicações web e tecnologia aplicada ao setor elétrico.">
+    <link rel="canonical" href="https://arthonjunieres.site/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://arthonjunieres.site/">
+    <meta property="og:title" content="Arthon Junieres | Tecnologia, Dados e Automação no Setor Elétrico">
+    <meta property="og:description" content="Portfólio profissional de Arthon Junieres, com projetos de análise de dados, Power BI, automação de processos, aplicações web e tecnologia aplicada ao setor elétrico.">
+    <meta property="og:image" content="https://i.postimg.cc/Dw1w1cGp/1-1.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Arthon Junieres | Tecnologia, Dados e Automação no Setor Elétrico">
+    <meta name="twitter:description" content="Portfólio profissional de Arthon Junieres, com projetos de análise de dados, Power BI, automação de processos, aplicações web e tecnologia aplicada ao setor elétrico.">
+    <meta name="twitter:image" content="https://i.postimg.cc/Dw1w1cGp/1-1.jpg">
+
+    <!-- Favicon (gerado em SVG, iniciais AJ) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233b82f6'/%3E%3Cstop offset='100%25' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%230f172a'/%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)' fill-opacity='0.85'/%3E%3Ctext x='50' y='66' font-family='Arial, sans-serif' font-size='42' font-weight='700' fill='white' text-anchor='middle'%3EAJ%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Dados estruturados (Person) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Arthon Junieres",
+        "url": "https://arthonjunieres.site/",
+        "image": "https://i.postimg.cc/Dw1w1cGp/1-1.jpg",
+        "jobTitle": "Analista de Processos e Dados no Setor Elétrico",
+        "description": "Técnico em Eletrotécnica com atuação em Power BI, automação de processos e desenvolvimento de soluções web para o setor elétrico.",
+        "email": "mailto:arthonjuny@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Piripiri",
+            "addressRegion": "PI",
+            "addressCountry": "BR"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/arthonjunieres"
+        ]
+    }
+    </script>
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
         :root {
-            --primary: #3b82f6;
-            --primary-dark: #2563eb;
-            --secondary: #8b5cf6;
-            --dark: #0f172a;
-            --light: #f1f5f9;
-            --accent: #06b6d4;
+            /* Azul-elétrico — acento único, minimalista */
+            --primary: #2f6feb;
+            --primary-dark: #1d4ed8;
+            --secondary: #2f6feb;
+            --dark: #131417;
+            --dark-panel: #191b1f;
+            --surface: #1c1e23;
+            --line: rgba(255, 255, 255, 0.09);
+            --light: #f2f3f4;
+            --ink-muted: #9aa0a8;
+            --accent: #2f6feb;
         }
-        
+
         html {
             scroll-behavior: smooth;
         }
-        
+
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Archivo', sans-serif;
             background-color: var(--dark);
+            background-image: radial-gradient(circle at 50% 0%, rgba(47, 111, 235, 0.07), transparent 55%);
+            background-repeat: no-repeat;
             color: var(--light);
             overflow-x: hidden;
             transition: background-color 0.5s ease, color 0.5s ease;
         }
-        
+
+        h1, h2.section-title, .brand-mark {
+            font-family: 'Big Shoulders Display', sans-serif;
+            letter-spacing: -0.01em;
+        }
+
+        .mono, .timeline-item p.text-sm, .skill-tag, .project-tag {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
         body.light-mode {
-            background-color: #f8fafc;
-            color: #1e293b;
+            background-color: #f6f7f8;
+            background-image: radial-gradient(circle at 50% 0%, rgba(47, 111, 235, 0.05), transparent 55%);
+            background-repeat: no-repeat;
+            color: #17181c;
         }
-        
+
         body.light-mode .card {
-            background: rgba(255, 255, 255, 0.8);
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            border: 1px solid rgba(19, 20, 23, 0.1);
         }
-        
+
         body.light-mode .timeline-item::before {
-            border: 3px solid #f8fafc;
+            border-color: #f6f7f8;
         }
-        
+
         body.light-mode .nav-link {
-            color: #1e293b;
+            color: #17181c;
         }
-        
+
         body.light-mode .mobile-menu {
-            background: rgba(248, 250, 252, 0.95);
+            background: rgba(246, 247, 248, 0.97);
         }
-        
+
+        body.light-mode .skill-tag {
+            background: rgba(47, 111, 235, 0.07);
+            border-color: rgba(47, 111, 235, 0.25);
+            color: #17181c;
+        }
+
+        body.light-mode .project-media {
+            background: rgba(47, 111, 235, 0.06);
+            border-color: rgba(47, 111, 235, 0.2);
+        }
+
+        /* Títulos em cor sólida âmbar — sem gradiente, escolha deliberada */
         .gradient-text {
-            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            color: var(--primary);
         }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-        }
-        
+
         .card {
-            background: rgba(30, 41, 59, 0.8);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            transition: all 0.4s ease;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4) inset;
         }
-        
+
+        /* Cantos de esquadro — referência a desenho técnico/planta de obra */
+        .card::before,
+        .card::after {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border: 2px solid var(--primary);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+
+        .card::before {
+            top: -1px;
+            left: -1px;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .card::after {
+            bottom: -1px;
+            right: -1px;
+            border-left: none;
+            border-top: none;
+        }
+
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+            transform: translateY(-4px);
+            border-color: rgba(47, 111, 235, 0.45);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
         }
-        
+
+        .card:hover::before,
+        .card:hover::after {
+            opacity: 1;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .card {
+                transition: border-color 0.2s ease;
+            }
+            .card:hover {
+                transform: none;
+            }
+        }
+
         .timeline-item {
             position: relative;
         }
-        
+
         .timeline-item::before {
             content: '';
             position: absolute;
             left: -38px;
-            top: 0;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
+            top: 6px;
+            width: 13px;
+            height: 13px;
             background: var(--primary);
             border: 3px solid var(--dark);
+            transform: rotate(45deg);
             z-index: 2;
         }
-        
-        .skill-bar {
-            height: 10px;
-            border-radius: 5px;
-            background: rgba(30, 41, 59, 0.5);
-            overflow: hidden;
-        }
-        
-        .skill-progress {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            border-radius: 5px;
-            transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1);
-        }
-        
+
         .btn-primary {
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            color: white;
-            transition: all 0.3s ease;
+            background: var(--primary);
+            color: #ffffff;
+            font-weight: 700;
+            transition: background-color 0.25s ease, transform 0.25s ease;
             position: relative;
             z-index: 1;
-            overflow: hidden;
         }
-        
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 100%;
-            background: linear-gradient(90deg, var(--secondary), var(--primary));
-            transition: all 0.5s ease;
-            z-index: -1;
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
         }
-        
-        .btn-primary:hover::before {
-            width: 100%;
+
+        .btn-primary:disabled,
+        .btn-outline:disabled,
+        .btn-primary[aria-disabled="true"],
+        .btn-outline[aria-disabled="true"] {
+            opacity: 0.45;
+            cursor: not-allowed;
+            pointer-events: none;
         }
-        
+
         .btn-outline {
             border: 2px solid var(--primary);
             color: var(--primary);
-            transition: all 0.3s ease;
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
+            background: transparent;
+            transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
         }
-        
-        .btn-outline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 100%;
-            background: var(--primary);
-            transition: all 0.5s ease;
-            z-index: -1;
-            opacity: 0.1;
-        }
-        
+
         .btn-outline:hover {
-            color: white;
+            background: var(--primary);
+            color: #ffffff;
+            transform: translateY(-2px);
         }
-        
-        .btn-outline:hover::before {
-            width: 100%;
-            opacity: 1;
-        }
-        
+
         .nav-link {
             position: relative;
             transition: all 0.3s ease;
         }
-        
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -177,22 +259,27 @@
             height: 2px;
             bottom: -4px;
             left: 0;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            background: var(--primary);
             transition: width 0.3s ease;
         }
-        
-        .nav-link:hover::after {
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
             width: 100%;
         }
-        
+
+        .nav-link.active {
+            color: var(--primary);
+        }
+
         .mobile-menu {
             position: fixed;
             top: 0;
             right: -100%;
             width: 80%;
             height: 100vh;
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(10, 18, 28, 0.97);
+            border-left: 1px solid var(--line);
             z-index: 100;
             transition: all 0.5s ease;
             display: flex;
@@ -200,44 +287,29 @@
             justify-content: center;
             align-items: center;
         }
-        
+
         .mobile-menu.active {
             right: 0;
         }
-        
+
         .floating {
             animation: floating 4s ease-in-out infinite;
         }
-        
+
         @keyframes floating {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-15px) rotate(2deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0px); }
         }
-        
-        .blob {
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.15;
-            z-index: -1;
-            animation: blob-animation 15s infinite alternate;
+
+        @media (prefers-reduced-motion: reduce) {
+            .floating { animation: none; }
         }
-        
-        @keyframes blob-animation {
-            0% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(100px, -100px) scale(1.2); }
-            66% { transform: translate(-100px, 100px) scale(0.8); }
-            100% { transform: translate(0, 0) scale(1); }
-        }
-        
+
         .cursor-glow {
             width: 300px;
             height: 300px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, rgba(15, 23, 42, 0) 70%);
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(10, 18, 28, 0) 70%);
             border-radius: 50%;
             position: fixed;
             pointer-events: none;
@@ -246,49 +318,47 @@
             transition: all 0.1s ease;
             opacity: 0;
         }
-        
+
         .cursor-glow.active {
             opacity: 1;
         }
-        
+
         .scroll-indicator {
             position: fixed;
             top: 0;
             left: 0;
             height: 3px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            background: var(--primary);
             z-index: 9999;
             width: 0%;
             transition: width 0.1s ease;
         }
-        
+
         .contact-form input,
         .contact-form textarea {
-            background: rgba(30, 41, 59, 0.5);
+            background: rgba(18, 32, 47, 0.6);
             border: 1px solid rgba(255, 255, 255, 0.1);
             color: white;
             transition: all 0.3s ease;
         }
-        
+
         .contact-form input:focus,
         .contact-form textarea:focus {
             border-color: var(--primary);
-            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 0 0 2px rgba(47, 111, 235, 0.35);
             outline: none;
         }
-        
-        /* Novo estilo para melhorar visibilidade dos campos */
+
         .contact-form input,
         .contact-form textarea,
         input[type="text"],
         input[type="email"],
         textarea {
-            background-color: rgba(15, 23, 42, 0.7);
+            background-color: rgba(10, 18, 28, 0.7);
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        
-        /* Estilo para o modo claro */
+
         body.light-mode .contact-form input,
         body.light-mode .contact-form textarea,
         body.light-mode input[type="text"],
@@ -298,25 +368,31 @@
             color: #1e293b;
             border: 1px solid rgba(0, 0, 0, 0.2);
         }
-        
-        /* Estilo para placeholder */
+
         ::placeholder {
             color: rgba(255, 255, 255, 0.5);
         }
-        
+
         body.light-mode ::placeholder {
             color: rgba(0, 0, 0, 0.5);
         }
-        
+
         .contact-form label {
             transition: all 0.3s ease;
         }
-        
+
         .contact-form input:focus + label,
         .contact-form textarea:focus + label {
             color: var(--primary);
         }
-        
+
+        .contact-form .field-error {
+            color: #f87171;
+            font-size: 0.8rem;
+            margin-top: 0.35rem;
+            min-height: 1rem;
+        }
+
         /* Preloader */
         .preloader {
             position: fixed;
@@ -331,12 +407,12 @@
             z-index: 9999;
             transition: opacity 0.5s ease, visibility 0.5s ease;
         }
-        
+
         .preloader.fade-out {
             opacity: 0;
             visibility: hidden;
         }
-        
+
         .loader {
             width: 80px;
             height: 80px;
@@ -345,20 +421,20 @@
             border-top-color: var(--primary);
             animation: spin 1s infinite linear;
         }
-        
+
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-        
-        /* Typing Animation - Nova versão */
+
+        /* Typing Animation */
         .typewriter-container {
             position: relative;
             height: auto;
             min-height: 40px;
             overflow: visible;
         }
-        
+
         .typewriter-container h2 {
             position: absolute;
             top: 0;
@@ -370,248 +446,286 @@
             margin: 0;
             padding: 0;
         }
-        
+
         .typewriter-container h2.active {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         .typewriter-container h2.fade-out {
             opacity: 0;
             transform: translateY(-10px);
             transition: opacity 0.5s ease, transform 0.5s ease;
         }
-        
-        /* Ajuste do contêiner para melhor visualização */
+
         .typewriter-wrapper {
             position: relative;
-            height: 40px;
-            margin-bottom: 20px;
-            overflow: hidden;
+            min-height: 50px;
+            margin-bottom: 25px;
+            overflow: visible;
+            transition: height 0.3s ease;
         }
-        
+
         /* Back to Top Button */
         .back-to-top {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 6px;
+            background: var(--surface);
+            border: 1px solid var(--primary);
+            color: var(--primary);
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
             opacity: 0;
             visibility: hidden;
-            transition: all 0.3s ease;
+            transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
             z-index: 99;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
-        
+
         .back-to-top.active {
             opacity: 1;
             visibility: visible;
         }
-        
+
         .back-to-top:hover {
-            transform: translateY(-5px);
+            background: var(--primary);
+            color: #ffffff;
+            transform: translateY(-4px);
         }
-        
-        /* Portfolio Gallery */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        
-        .portfolio-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-            cursor: pointer;
-        }
-        
-        .portfolio-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .portfolio-item:hover img {
-            transform: scale(1.05);
-        }
-        
-        .portfolio-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-        
-        .portfolio-item:hover .portfolio-overlay {
-            transform: translateY(0);
-        }
-        
+
         /* Theme Toggle */
         .theme-toggle {
             position: fixed;
             bottom: 30px;
             left: 30px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 6px;
+            background: var(--surface);
+            border: 1px solid var(--secondary);
+            color: var(--secondary);
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
             z-index: 99;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
+            transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
         }
-        
+
         .theme-toggle:hover {
-            transform: rotate(45deg);
+            background: var(--secondary);
+            color: #ffffff;
+            transform: scale(1.05);
         }
-        
-        /* Swiper Styles */
-        .swiper {
-            width: 100%;
-            padding-bottom: 50px;
+
+        /* Skill tags — rótulos técnicos em mono (substituem as barras de porcentagem) */
+        .skill-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.45rem 0.9rem;
+            border-radius: 4px;
+            background: rgba(47, 111, 235, 0.09);
+            border: 1px solid rgba(47, 111, 235, 0.3);
+            color: var(--light);
+            font-size: 0.8rem;
+            opacity: 0;
+            transform: translateY(12px) scale(0.96);
+            transition: opacity 0.5s ease, transform 0.5s ease, background 0.3s ease;
         }
-        
-        .swiper-slide {
-            background-position: center;
-            background-size: cover;
-            width: 300px;
-            height: 400px;
-            border-radius: 16px;
+
+        /* Entrada animada dos tags quando a seção fica visível (mesmo padrão das antigas barras de habilidade) */
+        #competencias.in-view .skill-tag {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        #competencias .flex.flex-wrap.gap-2 .skill-tag:nth-child(1) { transition-delay: 0.05s; }
+        #competencias .flex.flex-wrap.gap-2 .skill-tag:nth-child(2) { transition-delay: 0.1s; }
+        #competencias .flex.flex-wrap.gap-2 .skill-tag:nth-child(3) { transition-delay: 0.15s; }
+        #competencias .flex.flex-wrap.gap-2 .skill-tag:nth-child(4) { transition-delay: 0.2s; }
+        #competencias .flex.flex-wrap.gap-2 .skill-tag:nth-child(5) { transition-delay: 0.25s; }
+        #competencias .flex.flex-wrap.gap-2 .skill-tag:nth-child(6) { transition-delay: 0.3s; }
+        #competencias .flex.flex-wrap.gap-2 .skill-tag:nth-child(7) { transition-delay: 0.35s; }
+
+        .skill-tag:hover {
+            background: rgba(245, 165, 36, 0.18);
+            transform: translateY(-2px) scale(1);
+        }
+
+        .skill-tag i {
+            color: var(--primary);
+            font-size: 0.85rem;
+        }
+
+        /* Project cards */
+        .project-media {
+            height: 88px;
+            width: 88px;
+            border-radius: 6px;
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-media i {
+            font-size: 2rem;
+            color: var(--secondary);
+        }
+
+        .project-tag {
+            display: inline-block;
+            padding: 0.25rem 0.65rem;
+            border-radius: 4px;
+            background: rgba(245, 165, 36, 0.1);
+            border: 1px solid rgba(245, 165, 36, 0.28);
+            color: var(--light);
+            font-size: 0.7rem;
+            margin: 0 0.35rem 0.35rem 0;
+        }
+
+        body.light-mode .project-tag {
+            color: #16232f;
+            background: rgba(179, 118, 15, 0.08);
+            border-color: rgba(179, 118, 15, 0.25);
+        }
+
+        /* Utilitário para acessibilidade */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
             overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }
-        
-        .swiper-slide img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .swiper-pagination-bullet {
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 1rem;
             background: var(--primary);
+            color: #1a1305;
+            font-weight: 700;
+            padding: 0.75rem 1.25rem;
+            border-radius: 6px;
+            z-index: 10000;
+            transition: top 0.3s ease;
         }
-        
+
+        .skip-link:focus {
+            top: 1rem;
+        }
+
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        textarea:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+        }
+
         /* Ajustes de tamanho de fonte */
         h1.gradient-text {
-            font-size: 4.5rem; /* Tamanho para desktop */
+            font-size: 4.5rem;
         }
-        
+
         .typewriter-container h2 {
-            font-size: 2rem; /* Tamanho para desktop */
+            font-size: 2rem;
         }
-        
+
         p.text-lg {
-            font-size: 1.25rem; /* Tamanho para desktop */
+            font-size: 1.25rem;
             line-height: 1.6;
         }
-        
-        /* Ajuste para o contêiner de typewriter */
-        .typewriter-wrapper {
-            height: 50px;
-            margin-bottom: 25px;
-        }
-        
-        /* Ajustes específicos para mobile */
+
         @media (max-width: 768px) {
             h1.gradient-text {
                 font-size: 2.5rem !important;
             }
-            
+
             .typewriter-container h2 {
                 font-size: 1.5rem !important;
             }
-            
+
             p.text-lg {
                 font-size: 1rem !important;
                 line-height: 1.5;
             }
-            
+
             .typewriter-wrapper {
-                height: 40px;
+                min-height: 40px;
                 margin-bottom: 20px;
             }
-            
-            /* Melhorar visualização em telas pequenas */
+
             .container {
                 padding-left: 10px;
                 padding-right: 10px;
             }
-            
-            /* Reordenar elementos na seção sobre para mostrar foto primeiro */
-            #sobre .grid {
+
+            #inicio .grid {
                 display: flex;
                 flex-direction: column-reverse;
             }
-            
-            #sobre .grid > div:first-child {
+
+            #inicio .grid > div:first-child {
                 margin-top: 2rem;
             }
-            
-            /* Centralizar a foto de perfil */
-            #sobre .grid > div:last-child {
+
+            #inicio .grid > div:last-child {
                 display: flex;
                 justify-content: center;
                 margin-bottom: 1.5rem;
             }
         }
-        
-        /* Ajuste para botões menores */
+
         .btn-primary, .btn-outline {
-            padding: 0.5rem 1.25rem !important; /* Reduzido de px-8 py-4 */
+            padding: 0.5rem 1.25rem !important;
             font-size: 0.9rem;
             display: inline-flex;
             align-items: center;
             justify-content: center;
         }
-        
-        /* Ajuste para ícones nos botões */
+
         .btn-primary i, .btn-outline i {
             margin-right: 0.5rem;
             font-size: 0.9rem;
         }
-        
-        /* Melhorar espaçamento entre botões */
+
         .flex.flex-wrap.gap-4 {
             gap: 0.75rem !important;
         }
-        
-        /* Melhorar margens laterais e centralização */
+
         .container {
-            width: 85%;  /* Aumentado para melhor visualização */
+            width: 85%;
             max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
             padding-left: 15px;
             padding-right: 15px;
         }
-        
+
         @media (max-width: 768px) {
             .container {
-                width: 90%;  /* Em telas menores, usa mais espaço */
+                width: 90%;
                 padding-left: 10px;
                 padding-right: 10px;
             }
         }
-        
-        /* Centralização adicional para seções */
+
         section {
             display: flex;
             flex-direction: column;
@@ -619,130 +733,113 @@
             justify-content: center;
             width: 100%;
         }
-        
-        /* Centralização para dispositivos móveis */
+
         @media (max-width: 768px) {
             .text-center-mobile {
                 text-align: center;
             }
-            
+
             .flex-center-mobile {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
-            
+
             .flex.flex-wrap.gap-4 {
                 justify-content: center;
             }
         }
-        
-        /* Ajuste para a seção hero */
-        #sobre .grid {
+
+        #inicio .grid {
             justify-content: center;
         }
-        
-        /* Centralizar conteúdo de texto */
+
         .hero-content {
             max-width: 600px;
             margin: 0 auto;
         }
-        
-        /* Ajuste para o contêiner de typewriter para acomodar texto maior */
-        .typewriter-wrapper {
-            height: 50px; /* Aumentado de 40px */
-            margin-bottom: 25px; /* Aumentado de 20px */
-        }
-        
-        /* Ajuste para melhor espaçamento entre elementos */
+
         .hero-content h1 {
-            margin-bottom: 1.5rem; /* Aumentado para melhor espaçamento */
-        }
-        
-        /* Ajuste para melhor visualização em dispositivos móveis - mantendo altura */
-        @media (max-width: 768px) {
-            .typewriter-wrapper {
-                height: 50px; /* Mantido igual ao desktop */
-                margin-bottom: 25px; /* Mantido igual ao desktop */
-            }
+            margin-bottom: 1.5rem;
         }
     </style>
 </head>
 <body>
+    <a href="#inicio" class="skip-link">Pular para o conteúdo</a>
+
     <!-- Preloader -->
     <div class="preloader">
-        <div class="loader"></div>
+        <div class="loader" role="status" aria-label="Carregando página"></div>
     </div>
-    
+
     <!-- Cursor Glow Effect -->
-    <div class="cursor-glow"></div>
-    
+    <div class="cursor-glow" aria-hidden="true"></div>
+
     <!-- Scroll Progress Indicator -->
-    <div class="scroll-indicator"></div>
-    
-    <!-- Background Blobs -->
-    <div class="blob" style="top: 10%; left: 10%;"></div>
-    <div class="blob" style="bottom: 20%; right: 10%;"></div>
-    <div class="blob" style="top: 50%; left: 50%;"></div>
-    
+    <div class="scroll-indicator" aria-hidden="true"></div>
+
     <!-- Theme Toggle Button -->
-    <div class="theme-toggle">
-        <i class="fas fa-moon"></i>
-    </div>
-    
+    <button class="theme-toggle" aria-label="Alternar entre modo claro e escuro" type="button">
+        <i class="fas fa-moon" aria-hidden="true"></i>
+    </button>
+
     <!-- Back to Top Button -->
-    <div class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </div>
-    
+    <button class="back-to-top" aria-label="Voltar ao topo da página" type="button">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
     <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <button id="close-menu" class="absolute top-8 right-8 text-3xl">
-            <i class="fas fa-times"></i>
+    <div class="mobile-menu" id="mobile-menu">
+        <button id="close-menu" class="absolute top-8 right-8 text-3xl" aria-label="Fechar menu" type="button">
+            <i class="fas fa-times" aria-hidden="true"></i>
         </button>
-        <div class="flex flex-col space-y-8 items-center text-xl">
+        <nav class="flex flex-col space-y-8 items-center text-xl" aria-label="Navegação principal (mobile)">
+            <a href="#inicio" class="nav-link mobile-link">Início</a>
             <a href="#sobre" class="nav-link mobile-link">Sobre</a>
+            <a href="#projetos" class="nav-link mobile-link">Projetos</a>
             <a href="#experiencia" class="nav-link mobile-link">Experiência</a>
-            <a href="#habilidades" class="nav-link mobile-link">Habilidades</a>
+            <a href="#competencias" class="nav-link mobile-link">Competências</a>
             <a href="#formacao" class="nav-link mobile-link">Formação</a>
             <a href="#certificacoes" class="nav-link mobile-link">Certificações</a>
             <a href="#contato" class="nav-link mobile-link">Contato</a>
-        </div>
+        </nav>
         <div class="mt-12 flex space-x-4">
-            <a href="https://linkedin.com/in/arthonjunieres" target="_blank" class="text-2xl text-blue-400 hover:text-blue-300 transition-colors">
-                <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/arthonjunieres" target="_blank" rel="noopener noreferrer" aria-label="Abrir LinkedIn de Arthon Junieres em nova guia" class="text-2xl text-blue-400 hover:text-blue-300 transition-colors">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
             </a>
-            <a href="mailto:arthonjuny@gmail.com" class="text-2xl text-blue-400 hover:text-blue-300 transition-colors">
-                <i class="fas fa-envelope"></i>
+            <a href="mailto:arthonjuny@gmail.com" aria-label="Enviar e-mail para Arthon Junieres" class="text-2xl text-blue-400 hover:text-blue-300 transition-colors">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
             </a>
-            <a href="tel:+5586995137002" class="text-2xl text-blue-400 hover:text-blue-300 transition-colors">
-                <i class="fas fa-phone"></i>
+            <a href="tel:+5586995137002" aria-label="Ligar para Arthon Junieres" class="text-2xl text-blue-400 hover:text-blue-300 transition-colors">
+                <i class="fas fa-phone" aria-hidden="true"></i>
             </a>
         </div>
     </div>
-    
+
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
+    <nav class="fixed top-0 w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10" aria-label="Navegação principal">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <a href="#" class="text-3xl font-bold gradient-text"></a>
+                <a href="#inicio" class="text-2xl font-bold gradient-text brand-mark">Arthon Junieres</a>
                 <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="nav-link">Início</a>
                     <a href="#sobre" class="nav-link">Sobre</a>
+                    <a href="#projetos" class="nav-link">Projetos</a>
                     <a href="#experiencia" class="nav-link">Experiência</a>
-                    <a href="#habilidades" class="nav-link">Habilidades</a>
+                    <a href="#competencias" class="nav-link">Competências</a>
                     <a href="#formacao" class="nav-link">Formação</a>
                     <a href="#certificacoes" class="nav-link">Certificações</a>
                     <a href="#contato" class="nav-link">Contato</a>
                 </div>
-                <button id="menu-toggle" class="md:hidden text-2xl">
-                    <i class="fas fa-bars"></i>
+                <button id="menu-toggle" class="md:hidden text-2xl" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" type="button">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="sobre" class="min-h-screen flex items-center pt-20 relative overflow-hidden">
+    <section id="inicio" class="min-h-screen flex items-center pt-20 relative overflow-hidden">
         <div class="container mx-auto px-4 py-16">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div data-aos="fade-right" data-aos-duration="1000" class="text-center-mobile">
@@ -750,34 +847,37 @@
                         <h1 class="text-5xl md:text-7xl font-bold mb-6 gradient-text">Arthon Junieres</h1>
                         <div class="typewriter-wrapper">
                             <div class="typewriter-container">
-                                <h2 class="text-2xl md:text-3xl font-medium text-slate-300">Analista de Logística</h2>
-                                <h2 class="text-2xl md:text-3xl font-medium text-slate-300">Especialista em Inventário</h2>
-                                <h2 class="text-2xl md:text-3xl font-medium text-slate-300">Gestor de Estoques</h2>
+                                <h2 class="text-2xl md:text-3xl font-medium text-slate-300 active">Analista de Processos e Dados no Setor Elétrico</h2>
+                                <h2 class="text-2xl md:text-3xl font-medium text-slate-300">Técnico em Eletrotécnica | Power BI</h2>
+                                <h2 class="text-2xl md:text-3xl font-medium text-slate-300">Automação de Processos | Soluções Web</h2>
                             </div>
                         </div>
-                        <p class="text-slate-400 mb-8 leading-relaxed text-lg">
-                            Especialista em gestão de materiais, controle de inventários e otimização de processos logísticos. 
-                            Domínio em Excel e Power BI para análise de dados e criação de dashboards estratégicos.
+                        <p class="text-slate-400 mb-4 leading-relaxed text-lg">
+                            Transformo processos operacionais em dashboards, aplicações web e automações que facilitam o acompanhamento de obras, melhoram o controle das informações e apoiam a tomada de decisão.
+                        </p>
+                        <p class="text-slate-500 mb-8 leading-relaxed text-sm md:text-base italic">
+                            Dados, automação e tecnologia aplicados à engenharia e às operações.
                         </p>
                         <div class="flex flex-wrap gap-4 justify-center">
-                            <a href="mailto:arthonjuny@gmail.com" class="rounded-full font-medium btn-primary flex items-center">
-                                <i class="fas fa-envelope"></i> Email
+                            <a href="#projetos" class="rounded-full font-medium btn-primary flex items-center">
+                                <i class="fas fa-diagram-project" aria-hidden="true"></i> Ver projetos
                             </a>
-                            <a href="https://linkedin.com/in/arthonjunieres" target="_blank" class="rounded-full font-medium btn-outline flex items-center">
-                                <i class="fab fa-linkedin-in"></i> LinkedIn
+                            <a href="https://www.linkedin.com/in/arthonjunieres" target="_blank" rel="noopener noreferrer" class="rounded-full font-medium btn-outline flex items-center">
+                                <i class="fab fa-linkedin-in" aria-hidden="true"></i> Acessar LinkedIn
                             </a>
-                            <a href="tel:+5586995137002" class="rounded-full font-medium btn-outline flex items-center">
-                                <i class="fas fa-phone"></i> (86) 99513-7002
+                            <a href="#contato" class="rounded-full font-medium btn-outline flex items-center">
+                                <i class="fas fa-envelope" aria-hidden="true"></i> Entrar em contato
                             </a>
                         </div>
                     </div>
                 </div>
                 <div data-aos="fade-left" data-aos-duration="1000" class="flex justify-center">
                     <div class="relative floating">
-                        <div class="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-blue-500/30 relative card">
+                        <div class="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-blue-500/30 relative" style="box-shadow: 0 20px 50px rgba(0,0,0,0.4);">
                             <img src="https://i.postimg.cc/Dw1w1cGp/1-1.jpg"
-                                 alt="Arthon Junieres"
-                                 class="w-full h-full object-cover">
+                                 alt="Foto de perfil de Arthon Junieres"
+                                 class="w-full h-full object-cover"
+                                 fetchpriority="high">
                         </div>
                         <div class="absolute -bottom-6 -right-6 card px-6 py-3 rounded-lg shadow-lg">
                             <span class="text-blue-400 font-bold">Piripiri, PI</span>
@@ -789,27 +889,27 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="py-20 relative">
+    <section id="estatisticas" class="py-20 relative">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div class="card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="100">
                     <h3 class="text-slate-400 text-sm mb-2">Experiência</h3>
-                    <div class="counter" data-target="3">
-                        <p class="text-4xl font-bold text-blue-400">0+</p>
+                    <div class="counter" data-target="3" data-suffix="+">
+                        <p class="text-4xl font-bold text-blue-400">3+</p>
                     </div>
                     <p class="text-sm text-slate-500 mt-2">anos de atuação</p>
                 </div>
                 <div class="card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="200">
                     <h3 class="text-slate-400 text-sm mb-2">Certificações</h3>
-                    <div class="counter" data-target="5">
-                        <p class="text-4xl font-bold text-blue-400">0+</p>
+                    <div class="counter" data-target="5" data-suffix="+">
+                        <p class="text-4xl font-bold text-blue-400">5+</p>
                     </div>
                     <p class="text-sm text-slate-500 mt-2">especializações</p>
                 </div>
                 <div class="card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="300">
                     <h3 class="text-slate-400 text-sm mb-2">Formação</h3>
-                    <div class="counter" data-target="2">
-                        <p class="text-4xl font-bold text-blue-400">0</p>
+                    <div class="counter" data-target="2" data-suffix="">
+                        <p class="text-4xl font-bold text-blue-400">2</p>
                     </div>
                     <p class="text-sm text-slate-500 mt-2">cursos técnicos</p>
                 </div>
@@ -822,86 +922,127 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="habilidades" class="py-20 relative">
+    <!-- About Section -->
+    <section id="sobre" class="py-20 relative">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-12 gradient-text text-center" data-aos="fade-up">Principais Competências</h2>
+            <h2 class="text-4xl font-bold mb-12 gradient-text section-title text-center" data-aos="fade-up">Sobre</h2>
+            <div class="max-w-3xl mx-auto card p-8 md:p-10 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                <p class="text-slate-300 leading-relaxed text-lg mb-6">
+                    Atuo na área operacional do setor elétrico, combinando experiência em programação e acompanhamento de obras, análise de dados e desenvolvimento de soluções digitais para otimizar processos.
+                </p>
+                <p class="text-slate-300 leading-relaxed text-lg">
+                    Ao longo da minha trajetória, identifiquei oportunidades de transformar tarefas manuais e informações dispersas em ferramentas mais simples, organizadas e eficientes. Com esse objetivo, desenvolvo dashboards, aplicações web e automações para monitoramento de indicadores, controle de atividades, gestão de carteiras de obras e apoio à tomada de decisão.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projetos" class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-4 gradient-text section-title text-center" data-aos="fade-up">Projetos</h2>
+            <p class="text-slate-400 text-center max-w-2xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="50">
+                Soluções desenvolvidas para organizar dados, automatizar processos e apoiar o acompanhamento de obras no setor elétrico.
+            </p>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="card p-8 rounded-xl" data-aos="fade-right">
-                    <div class="flex items-center mb-6">
-                        <div class="text-blue-400 text-3xl mr-4">
-                            <i class="fas fa-boxes"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold">Gestão de Estoques</h3>
+
+                <article class="card p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-media">
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
                     </div>
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-slate-400">Controle de Inventário</span>
-                                <span class="text-blue-400">95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 0%;" data-width="95%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-slate-400">Análise de Dados</span>
-                                <span class="text-blue-400">90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 0%;" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-slate-400">Processos Logísticos</span>
-                                <span class="text-blue-400">85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 0%;" data-width="85%"></div>
-                            </div>
-                        </div>
+                    <h3 class="text-2xl font-bold mb-3">Dashboard da Carteira de Obras</h3>
+                    <p class="text-slate-400 mb-4 leading-relaxed">
+                        Dashboard web desenvolvido para consolidar informações de planejamento, execução em campo, notas no SGO e registros no SAP. A solução apresenta indicadores, filtros combináveis, obras programadas e relatório detalhado para apoiar o acompanhamento da carteira e a tomada de decisão.
+                    </p>
+                    <div class="mb-6">
+                        <span class="project-tag">Dashboard Web</span>
+                        <span class="project-tag">Análise de Dados</span>
+                        <span class="project-tag">Excel</span>
+                        <span class="project-tag">Power BI</span>
+                        <span class="project-tag">Automação</span>
                     </div>
-                </div>
-                
-                <div class="card p-8 rounded-xl" data-aos="fade-left">
-                    <div class="flex items-center mb-6">
-                        <div class="text-blue-400 text-3xl mr-4">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold">Ferramentas Tecnológicas</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <button type="button" class="btn-primary rounded-full font-medium flex items-center" aria-disabled="true" title="Em breve">
+                            <i class="fas fa-eye" aria-hidden="true"></i> Ver detalhes
+                        </button>
+                        <button type="button" class="btn-outline rounded-full font-medium flex items-center" aria-disabled="true" title="Demonstração em breve">
+                            <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Demonstração
+                        </button>
                     </div>
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-slate-400">Excel</span>
-                                <span class="text-blue-400">95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 0%;" data-width="95%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-slate-400">Power BI</span>
-                                <span class="text-blue-400">85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 0%;" data-width="85%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-slate-400">AutoCAD</span>
-                                <span class="text-blue-400">75%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 0%;" data-width="75%"></div>
-                            </div>
-                        </div>
+                </article>
+
+                <article class="card p-8 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-media">
+                        <i class="fas fa-clipboard-list" aria-hidden="true"></i>
                     </div>
-                </div>
+                    <h3 class="text-2xl font-bold mb-3">Sistema de Relatório de Atividades</h3>
+                    <p class="text-slate-400 mb-4 leading-relaxed">
+                        Aplicação desenvolvida para registrar e acompanhar atividades executadas por equipes em campo, incluindo produtividade, serviços realizados, localização, fotografias e informações operacionais.
+                    </p>
+                    <div class="mb-6">
+                        <span class="project-tag">Aplicação Web</span>
+                        <span class="project-tag">Gestão Operacional</span>
+                        <span class="project-tag">Geolocalização</span>
+                        <span class="project-tag">Relatórios</span>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <button type="button" class="btn-primary rounded-full font-medium flex items-center" aria-disabled="true" title="Em breve">
+                            <i class="fas fa-eye" aria-hidden="true"></i> Ver detalhes
+                        </button>
+                        <button type="button" class="btn-outline rounded-full font-medium flex items-center" aria-disabled="true" title="Demonstração em breve">
+                            <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Demonstração
+                        </button>
+                    </div>
+                </article>
+
+                <article class="card p-8 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-media">
+                        <i class="fas fa-bell" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Monitoramento de Solicitações</h3>
+                    <p class="text-slate-400 mb-4 leading-relaxed">
+                        Sistema para importação, organização e monitoramento de solicitações operacionais, com acompanhamento de status, documentação, vencimentos, alertas e histórico de alterações.
+                    </p>
+                    <div class="mb-6">
+                        <span class="project-tag">Automação de Processos</span>
+                        <span class="project-tag">Controle Operacional</span>
+                        <span class="project-tag">Excel</span>
+                        <span class="project-tag">Dashboard</span>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <button type="button" class="btn-primary rounded-full font-medium flex items-center" aria-disabled="true" title="Em breve">
+                            <i class="fas fa-eye" aria-hidden="true"></i> Ver detalhes
+                        </button>
+                        <button type="button" class="btn-outline rounded-full font-medium flex items-center" aria-disabled="true" title="Demonstração em breve">
+                            <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Demonstração
+                        </button>
+                    </div>
+                </article>
+
+                <article class="card p-8 rounded-xl" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-media">
+                        <i class="fas fa-robot" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Automações Operacionais</h3>
+                    <p class="text-slate-400 mb-4 leading-relaxed">
+                        Soluções desenvolvidas para reduzir tarefas repetitivas, consolidar informações, organizar bases operacionais e facilitar a geração de relatórios e indicadores.
+                    </p>
+                    <div class="mb-6">
+                        <span class="project-tag">Automação</span>
+                        <span class="project-tag">Integração de Dados</span>
+                        <span class="project-tag">Inteligência Artificial</span>
+                        <span class="project-tag">Produtividade</span>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <button type="button" class="btn-primary rounded-full font-medium flex items-center" aria-disabled="true" title="Em breve">
+                            <i class="fas fa-eye" aria-hidden="true"></i> Ver detalhes
+                        </button>
+                        <button type="button" class="btn-outline rounded-full font-medium flex items-center" aria-disabled="true" title="Demonstração em breve">
+                            <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Demonstração
+                        </button>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
@@ -909,26 +1050,34 @@
     <!-- Experience Section -->
     <section id="experiencia" class="py-20 relative">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-12 gradient-text text-center" data-aos="fade-up">Experiência Profissional</h2>
+            <h2 class="text-4xl font-bold mb-12 gradient-text section-title text-center" data-aos="fade-up">Experiência Profissional</h2>
             <div class="relative">
                 <div class="absolute left-8 md:left-1/2 h-full w-0.5 bg-slate-700"></div>
-                
+
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- Left Side Items -->
                     <div class="md:mr-auto md:pr-16 md:text-right">
                         <div class="relative pl-12 md:pl-0 md:pr-12 timeline-item mb-12" data-aos="fade-right">
                             <div class="card p-8 rounded-xl hover:border-blue-500/30">
-                                <h3 class="font-bold text-xl text-sky-400 mb-2">Analista de Logística</h3>
-                                <p class="text-sm text-slate-400 mb-4">Infotec Brasil | Fev 2024 - Atual</p>
-                                <ul class="text-slate-300 list-disc list-inside space-y-2">
-                                    <li>Planejamento e coordenação de atividades logísticas</li>
-                                    <li>Otimização de
-                                    <li>Interface com fornecedores e clientes</li>
-                                </ul>
+                                <h3 class="font-bold text-xl text-sky-400 mb-2">Técnico em Eletrotécnica</h3>
+                                <p class="text-sm text-slate-400 mb-4">Edmil Construções | Piripiri, Piauí | Jul 2025 - Atual</p>
+                                <p class="text-slate-300 leading-relaxed">
+                                    Responsável por planejar e programar obras de energização vinculadas ao Grupo Equatorial Energia, garantindo a organização das demandas, prazos e recursos necessários para a execução das atividades em campo. Atua também na solicitação de abertura de SI (Solicitação de Intervenção), acompanhando os processos necessários para liberação das obras. Além disso, supervisiona a produtividade das equipes, monitorando o andamento das atividades, desempenho operacional e cumprimento da programação estabelecida.
+                                </p>
                             </div>
                         </div>
-                        
-                        <div class="relative pl-12 md:pl-0 md:pr-12 timeline-item mb-12" data-aos="fade-right" data-aos-delay="200">
+
+                        <div class="relative pl-12 md:pl-0 md:pr-12 timeline-item mb-12" data-aos="fade-right" data-aos-delay="150">
+                            <div class="card p-8 rounded-xl hover:border-blue-500/30">
+                                <h3 class="font-bold text-xl text-blue-400 mb-2">Analista de Logística</h3>
+                                <p class="text-sm text-slate-400 mb-4">Infotec Brasil | Parnaíba, Piauí | Fev 2024 - Jun 2025 (1 ano e 4 meses)</p>
+                                <p class="text-slate-300 leading-relaxed">
+                                    Responsável por planejar, coordenar e controlar as atividades logísticas da empresa, incluindo recebimento, armazenamento, distribuição e transporte de produtos. Atua na otimização de processos, controle de estoques, análise de indicadores de desempenho e interface com fornecedores e clientes, garantindo eficiência e redução de custos operacionais.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="relative pl-12 md:pl-0 md:pr-12 timeline-item mb-12" data-aos="fade-right" data-aos-delay="300">
                             <div class="card p-8 rounded-xl hover:border-blue-500/30">
                                 <h3 class="font-bold text-xl text-blue-400 mb-2">Designer Gráfico</h3>
                                 <p class="text-sm text-slate-400 mb-4">Print Confecções LTDA | Jan 2016 - Dez 2021</p>
@@ -940,7 +1089,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Right Side Items -->
                     <div class="md:ml-auto md:pl-16">
                         <div class="relative pl-12 timeline-item mb-12" data-aos="fade-left" data-aos-delay="100">
@@ -954,7 +1103,7 @@
                                 </ul>
                             </div>
                         </div>
-                        
+
                         <div class="relative pl-12 timeline-item" data-aos="fade-left" data-aos-delay="300">
                             <div class="card p-8 rounded-xl hover:border-blue-500/30">
                                 <h3 class="font-bold text-xl text-blue-400 mb-2">Projetista de CAD</h3>
@@ -972,14 +1121,74 @@
         </div>
     </section>
 
+    <!-- Skills / Competências Section -->
+    <section id="competencias" class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 gradient-text section-title text-center" data-aos="fade-up">Competências</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-6">
+                        <div class="text-blue-400 text-3xl mr-4">
+                            <i class="fas fa-chart-pie" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Dados e Indicadores</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag"><i class="fas fa-chart-pie" aria-hidden="true"></i>Power BI</span>
+                        <span class="skill-tag"><i class="fas fa-table" aria-hidden="true"></i>Excel avançado</span>
+                        <span class="skill-tag"><i class="fas fa-gauge-high" aria-hidden="true"></i>Dashboards gerenciais</span>
+                        <span class="skill-tag"><i class="fas fa-filter" aria-hidden="true"></i>Tratamento de dados</span>
+                        <span class="skill-tag"><i class="fas fa-diagram-project" aria-hidden="true"></i>Integração de informações</span>
+                        <span class="skill-tag"><i class="fas fa-signal" aria-hidden="true"></i>Indicadores operacionais</span>
+                    </div>
+                </div>
+
+                <div class="card p-8 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-6">
+                        <div class="text-blue-400 text-3xl mr-4">
+                            <i class="fas fa-robot" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Tecnologia e Automação</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag"><i class="fas fa-code" aria-hidden="true"></i>Desenvolvimento de aplicações web</span>
+                        <span class="skill-tag"><i class="fas fa-gears" aria-hidden="true"></i>Automação de processos</span>
+                        <span class="skill-tag"><i class="fas fa-brain" aria-hidden="true"></i>Inteligência artificial aplicada</span>
+                        <span class="skill-tag"><i class="fas fa-table-cells" aria-hidden="true"></i>Google Sheets</span>
+                        <span class="skill-tag"><i class="fas fa-file-code" aria-hidden="true"></i>Google Apps Script</span>
+                        <span class="skill-tag"><i class="fab fa-github" aria-hidden="true"></i>GitHub</span>
+                        <span class="skill-tag"><i class="fas fa-cloud" aria-hidden="true"></i>Vercel</span>
+                    </div>
+                </div>
+
+                <div class="card p-8 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-6">
+                        <div class="text-blue-400 text-3xl mr-4">
+                            <i class="fas fa-bolt" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Engenharia e Operações</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag"><i class="fas fa-helmet-safety" aria-hidden="true"></i>Programação e acompanhamento de obras</span>
+                        <span class="skill-tag"><i class="fas fa-bolt" aria-hidden="true"></i>Processos do setor elétrico</span>
+                        <span class="skill-tag"><i class="fas fa-database" aria-hidden="true"></i>SAP ECC</span>
+                        <span class="skill-tag"><i class="fas fa-boxes-stacked" aria-hidden="true"></i>Gestão de materiais</span>
+                        <span class="skill-tag"><i class="fas fa-drafting-compass" aria-hidden="true"></i>AutoCAD</span>
+                        <span class="skill-tag"><i class="fas fa-arrows-spin" aria-hidden="true"></i>Melhoria de processos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Education Section -->
     <section id="formacao" class="py-20 relative">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-12 gradient-text text-center" data-aos="fade-up">Formação Acadêmica</h2>
+            <h2 class="text-4xl font-bold mb-12 gradient-text section-title text-center" data-aos="fade-up">Formação Acadêmica</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="card p-8 rounded-xl" data-aos="flip-left">
                     <div class="text-blue-400 text-5xl mb-6">
-                        <i class="fas fa-graduation-cap"></i>
+                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Tecnólogo em Logística</h3>
                     <p class="text-slate-400 mb-2">Faculdade Focus</p>
@@ -991,7 +1200,7 @@
                 </div>
                 <div class="card p-8 rounded-xl" data-aos="flip-right">
                     <div class="text-blue-400 text-5xl mb-6">
-                        <i class="fas fa-certificate"></i>
+                        <i class="fas fa-certificate" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Técnico em Eletrotécnica</h3>
                     <p class="text-slate-400 mb-2">Instituto Daniel de La Touche</p>
@@ -1008,47 +1217,42 @@
     <!-- Certifications Section -->
     <section id="certificacoes" class="py-20 relative">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-12 gradient-text text-center" data-aos="fade-up">Certificações</h2>
+            <h2 class="text-4xl font-bold mb-12 gradient-text section-title text-center" data-aos="fade-up">Certificações</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="100">
                     <div class="text-blue-400 text-3xl mb-4">
-                        <i class="fas fa-link"></i>
+                        <i class="fas fa-link" aria-hidden="true"></i>
                     </div>
                     <h3 class="font-bold text-xl mb-2">Cadeia de Suprimentos</h3>
                     <p class="text-sm text-slate-400 mb-4">Turma 2024A</p>
                     <div class="flex justify-between items-center mt-4">
                         <span class="text-xs text-slate-500">2024</span>
-                        <button class="text-blue-400 hover:text-blue-300 transition-colors">
-                            <i class="fas fa-external-link-alt"></i>
-                        </button>
                     </div>
                 </div>
                 <div class="card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="200">
                     <div class="text-blue-400 text-3xl mb-4">
-                        <i class="fas fa-database"></i>
+                        <i class="fas fa-database" aria-hidden="true"></i>
                     </div>
-                    <h3 class="font-bold text-xl mb-2">
-                        Gerenciar Dados com Microsoft 365
-                    </h3>
+                    <h3 class="font-bold text-xl mb-2">Gerenciar Dados com Microsoft 365</h3>
                     <p class="text-sm text-slate-400">Certificação Profissional</p>
                 </div>
-                <div class="card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="300">
                     <div class="text-blue-400 text-3xl mb-4">
-                        <i class="fas fa-truck"></i>
+                        <i class="fas fa-truck" aria-hidden="true"></i>
                     </div>
                     <h3 class="font-bold text-xl mb-2">Estratégias de Logística na Administração Pública</h3>
                     <p class="text-sm text-slate-400">Certificação Profissional</p>
                 </div>
-                <div class="card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="400">
                     <div class="text-blue-400 text-3xl mb-4">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
                     </div>
                     <h3 class="font-bold text-xl mb-2">Otimização com Microsoft 365</h3>
                     <p class="text-sm text-slate-400">Certificação Profissional</p>
                 </div>
-                <div class="card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="500">
                     <div class="text-blue-400 text-3xl mb-4">
-                        <i class="fas fa-chart-pie"></i>
+                        <i class="fas fa-chart-pie" aria-hidden="true"></i>
                     </div>
                     <h3 class="font-bold text-xl mb-2">Power BI para Gestão</h3>
                     <p class="text-sm text-slate-400">Certificação Profissional</p>
@@ -1061,45 +1265,54 @@
     <section id="contato" class="py-20 relative">
         <div class="container mx-auto px-4">
             <div data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="text-4xl font-bold mb-12 text-center gradient-text">Entre em Contato</h2>
+                <h2 class="text-4xl font-bold mb-12 text-center gradient-text section-title">Entre em Contato</h2>
                 <div class="max-w-xl mx-auto">
                     <div class="card p-6 md:p-8">
                         <div class="chat-container">
                             <div class="chat-header mb-4">
                                 <p class="text-slate-300 text-center">Envie uma mensagem direta</p>
                             </div>
-                            <form id="chatForm" class="space-y-4">
+                            <form id="chatForm" class="contact-form space-y-4" novalidate>
                                 <div class="relative">
-                                    <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg" placeholder="Seu nome">
+                                    <label for="name" class="sr-only">Seu nome</label>
+                                    <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg" placeholder="Seu nome" autocomplete="name">
+                                    <p class="field-error" id="name-error" aria-live="polite"></p>
                                 </div>
                                 <div class="relative">
-                                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg" placeholder="Seu email">
+                                    <label for="email" class="sr-only">Seu email</label>
+                                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg" placeholder="Seu email" autocomplete="email">
+                                    <p class="field-error" id="email-error" aria-live="polite"></p>
                                 </div>
                                 <div class="relative">
+                                    <label for="message" class="sr-only">Sua mensagem</label>
                                     <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-lg" placeholder="Digite sua mensagem..."></textarea>
+                                    <p class="field-error" id="message-error" aria-live="polite"></p>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn-primary px-6 py-3 rounded-lg w-full">
-                                        <i class="fas fa-paper-plane mr-2"></i> Enviar Mensagem
+                                    <button type="submit" id="chatSubmit" class="btn-primary px-6 py-3 rounded-lg w-full">
+                                        <i class="fas fa-paper-plane mr-2" aria-hidden="true"></i> <span id="chatSubmitLabel">Enviar Mensagem</span>
                                     </button>
                                 </div>
                             </form>
-                            <div id="chatResponse" class="mt-4 text-center hidden">
-                                <p class="text-green-400"><i class="fas fa-check-circle mr-2"></i> Mensagem enviada com sucesso!</p>
+                            <div id="chatResponse" class="mt-4 text-center hidden" role="status" aria-live="polite">
+                                <p class="text-green-400"><i class="fas fa-check-circle mr-2" aria-hidden="true"></i> Mensagem pronta para envio via WhatsApp!</p>
+                            </div>
+                            <div id="chatErrorGeneral" class="mt-4 text-center hidden" role="alert" aria-live="assertive">
+                                <p class="text-red-400"><i class="fas fa-circle-exclamation mr-2" aria-hidden="true"></i> Preencha corretamente os campos destacados.</p>
                             </div>
                         </div>
                     </div>
                     <div class="mt-8 text-center">
                         <p class="text-slate-400">Ou entre em contato diretamente:</p>
                         <div class="flex justify-center space-x-6 mt-4">
-                            <a href="https://wa.me/5586995137002" target="_blank" class="text-2xl text-green-400 hover:text-green-300 transition-colors">
-                                <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/5586995137002" target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp" class="text-2xl text-green-400 hover:text-green-300 transition-colors">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i>
                             </a>
-                            <a href="mailto:arthonjuny@gmail.com" class="text-2xl text-blue-400 hover:text-blue-300 transition-colors">
-                                <i class="fas fa-envelope"></i>
+                            <a href="mailto:arthonjuny@gmail.com" aria-label="Enviar e-mail" class="text-2xl text-blue-400 hover:text-blue-300 transition-colors">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
                             </a>
-                            <a href="tel:+5586995137002" class="text-2xl text-blue-400 hover:text-blue-300 transition-colors">
-                                <i class="fas fa-phone"></i>
+                            <a href="https://www.linkedin.com/in/arthonjunieres" target="_blank" rel="noopener noreferrer" aria-label="Abrir LinkedIn" class="text-2xl text-blue-400 hover:text-blue-300 transition-colors">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
@@ -1112,44 +1325,17 @@
     <footer class="py-10 border-t border-white/10">
         <div class="container mx-auto px-4">
             <div class="text-center">
-                <p class="text-slate-400">&copy; 2023 Arthon Junieres. Todos os direitos reservados.</p>
-                <!-- Ícones removidos daqui -->
+                <p class="text-slate-400">&copy; <span id="current-year">2026</span> Arthon Junieres. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
-        // Formulário de contato
-        document.getElementById('chatForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Opção 1: Enviar para o WhatsApp
-            const whatsappMessage = `Nome: ${name}%0AEmail: ${email}%0AMensagem: ${message}`;
-            window.open(`https://wa.me/5586995137002?text=${whatsappMessage}`, '_blank');
-            
-            // Opção 2: Enviar por email usando mailto
-            // Descomente esta linha se preferir o método de email
-            // window.location.href = `mailto:arthonjuny@gmail.com?subject=Contato do Site - ${name}&body=Nome: ${name}%0AEmail: ${email}%0A%0AMensagem: ${message}`;
-            
-            // Mostrar mensagem de sucesso
-            document.getElementById('chatResponse').classList.remove('hidden');
-            
-            // Limpar formulário
-            this.reset();
-            
-            // Esconder mensagem de sucesso após 5 segundos
-            setTimeout(() => {
-                document.getElementById('chatResponse').classList.add('hidden');
-            }, 5000);
-        });
-        
+        // Ano atual no rodapé
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
         // Inicializar AOS (Animate On Scroll)
         AOS.init({
             duration: 800,
@@ -1157,7 +1343,7 @@
             once: false,
             mirror: true
         });
-        
+
         // Preloader
         window.addEventListener('load', function() {
             const preloader = document.querySelector('.preloader');
@@ -1165,44 +1351,57 @@
                 preloader.classList.add('fade-out');
             }, 500);
         });
-        
+
         // Menu Mobile
         const menuToggle = document.getElementById('menu-toggle');
         const closeMenu = document.getElementById('close-menu');
         const mobileMenu = document.querySelector('.mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
-        
+
         menuToggle.addEventListener('click', function() {
             mobileMenu.classList.add('active');
+            menuToggle.setAttribute('aria-expanded', 'true');
+            closeMenu.focus();
         });
-        
+
         closeMenu.addEventListener('click', function() {
             mobileMenu.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.focus();
         });
-        
+
         mobileLinks.forEach(link => {
             link.addEventListener('click', function() {
                 mobileMenu.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
             });
         });
-        
+
+        // Fecha o menu mobile com a tecla Esc
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.focus();
+            }
+        });
+
         // Cursor Glow Effect
         const cursorGlow = document.querySelector('.cursor-glow');
-        
+
         document.addEventListener('mousemove', function(e) {
             cursorGlow.style.left = e.clientX + 'px';
             cursorGlow.style.top = e.clientY + 'px';
             cursorGlow.classList.add('active');
         });
-        
-        // Scroll Progress Indicator
+
+        // Scroll Progress Indicator + Back to Top visibility
         window.addEventListener('scroll', function() {
             const scrollIndicator = document.querySelector('.scroll-indicator');
             const totalHeight = document.body.scrollHeight - window.innerHeight;
-            const progress = (window.pageYOffset / totalHeight) * 100;
+            const progress = totalHeight > 0 ? (window.pageYOffset / totalHeight) * 100 : 0;
             scrollIndicator.style.width = progress + '%';
-            
-            // Back to Top Button
+
             const backToTop = document.querySelector('.back-to-top');
             if (window.pageYOffset > 300) {
                 backToTop.classList.add('active');
@@ -1210,131 +1409,269 @@
                 backToTop.classList.remove('active');
             }
         });
-        
+
         // Back to Top Button
-        const backToTop = document.querySelector('.back-to-top');
-        backToTop.addEventListener('click', function() {
+        document.querySelector('.back-to-top').addEventListener('click', function() {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         });
-        
+
         // Theme Toggle
         const themeToggle = document.querySelector('.theme-toggle');
         const themeIcon = themeToggle.querySelector('i');
-        
+
         themeToggle.addEventListener('click', function() {
             document.body.classList.toggle('light-mode');
-            
-            if (document.body.classList.contains('light-mode')) {
+            const isLight = document.body.classList.contains('light-mode');
+
+            if (isLight) {
                 themeIcon.classList.remove('fa-moon');
                 themeIcon.classList.add('fa-sun');
             } else {
                 themeIcon.classList.remove('fa-sun');
                 themeIcon.classList.add('fa-moon');
             }
+            themeToggle.setAttribute('aria-label', isLight ? 'Alternar para modo escuro' : 'Alternar para modo claro');
         });
-        
+
         // Typewriter Animation
         document.addEventListener('DOMContentLoaded', function() {
+            const typewriterWrapper = document.querySelector('.typewriter-wrapper');
             const typewriterTexts = document.querySelectorAll('.typewriter-container h2');
             let currentIndex = 0;
-            
+
+            // Mede a altura real de cada frase (mesmo as que não estão ativas) e
+            // ajusta o wrapper para a mais alta, evitando que a transição corte
+            // texto que quebra em duas linhas em telas menores.
+            function adjustWrapperHeight() {
+                if (!typewriterWrapper || typewriterTexts.length === 0) return;
+
+                let maxHeight = 0;
+                typewriterTexts.forEach(text => {
+                    const prevPosition = text.style.position;
+                    const prevOpacity = text.style.opacity;
+                    const prevTransform = text.style.transform;
+                    const prevVisibility = text.style.visibility;
+
+                    text.style.position = 'relative';
+                    text.style.visibility = 'hidden';
+                    text.style.opacity = '1';
+                    text.style.transform = 'none';
+
+                    maxHeight = Math.max(maxHeight, text.offsetHeight);
+
+                    text.style.position = prevPosition;
+                    text.style.opacity = prevOpacity;
+                    text.style.transform = prevTransform;
+                    text.style.visibility = prevVisibility;
+                });
+
+                if (maxHeight > 0) {
+                    typewriterWrapper.style.height = maxHeight + 'px';
+                }
+            }
+
             function showNextText() {
-                // Remove active class from all texts
                 typewriterTexts.forEach(text => {
                     text.classList.remove('active');
                     text.classList.remove('fade-out');
                 });
-                
-                // Add active class to current text
+
                 typewriterTexts[currentIndex].classList.add('active');
-                
-                // Set timeout for next text
+
                 setTimeout(() => {
                     typewriterTexts[currentIndex].classList.add('fade-out');
-                    
-                    // Update index
                     currentIndex = (currentIndex + 1) % typewriterTexts.length;
-                    
-                    // Show next text after fade out
                     setTimeout(showNextText, 500);
-                }, 3000); // Exibe cada texto por 3 segundos
+                }, 3000);
             }
-            
-            // Start animation
+
             if (typewriterTexts.length > 0) {
+                adjustWrapperHeight();
                 showNextText();
+
+                let resizeTimeout;
+                window.addEventListener('resize', () => {
+                    clearTimeout(resizeTimeout);
+                    resizeTimeout = setTimeout(adjustWrapperHeight, 150);
+                });
             }
         });
-        
-        // Counters Animation
-        const counters = document.querySelectorAll('.counter');
-        
-        function startCounters() {
-            counters.forEach(counter => {
-                const target = parseInt(counter.getAttribute('data-target'));
-                const countElement = counter.querySelector('p');
-                const increment = target / 30;
-                let count = 0;
-                
-                const updateCount = () => {
-                    if (count < target) {
-                        count += increment;
-                        countElement.textContent = Math.ceil(count) + '+';
-                        setTimeout(updateCount, 50);
-                    } else {
-                        countElement.textContent = target + '+';
-                    }
-                };
-                
-                updateCount();
-            });
-        }
-        
-        // Iniciar contadores quando estiverem visíveis
-        const observerOptions = {
-            threshold: 0.5
-        };
-        
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    startCounters();
-                    observer.unobserve(entry.target);
+
+        // Counters Animation - com fallback e disparo único por elemento visível
+        const statsSection = document.getElementById('estatisticas');
+
+        function animateCounter(counterEl) {
+            const target = parseInt(counterEl.getAttribute('data-target'), 10);
+            const suffix = counterEl.getAttribute('data-suffix') || '';
+            const countElement = counterEl.querySelector('p');
+
+            if (!countElement || isNaN(target)) return;
+
+            const durationSteps = 30;
+            const increment = target / durationSteps;
+            let count = 0;
+
+            const updateCount = () => {
+                if (count < target) {
+                    count += increment;
+                    countElement.textContent = Math.ceil(count) + suffix;
+                    setTimeout(updateCount, 50);
+                } else {
+                    countElement.textContent = target + suffix;
                 }
-            });
-        }, observerOptions);
-        
-        const statsSection = document.querySelector('.counter').parentElement.parentElement.parentElement;
-        observer.observe(statsSection);
-        
-        // Skill Bars Animation
-        const skillBars = document.querySelectorAll('.skill-progress');
-        
-        function animateSkillBars() {
-            skillBars.forEach(bar => {
-                const percentage = bar.getAttribute('data-percentage');
-                bar.style.width = percentage + '%';
-            });
+            };
+
+            updateCount();
         }
-        
-        // Iniciar animação das barras quando estiverem visíveis
-        const skillsSection = document.getElementById('habilidades');
+
+        if (statsSection) {
+            const counters = statsSection.querySelectorAll('.counter');
+
+            if ('IntersectionObserver' in window) {
+                const statsObserver = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            counters.forEach(animateCounter);
+                            statsObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.4 });
+
+                statsObserver.observe(statsSection);
+            } else {
+                // Fallback: sem IntersectionObserver, os valores estáticos do HTML já são exibidos.
+            }
+        }
+
+        // Animação dos tags de competências ao entrar na tela (mesmo gatilho das antigas barras de habilidade)
+        const skillsSection = document.getElementById('competencias');
         if (skillsSection) {
-            const skillsObserver = new IntersectionObserver(entries => {
+            if ('IntersectionObserver' in window) {
+                const skillsObserver = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            skillsSection.classList.add('in-view');
+                            skillsObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.2 });
+
+                skillsObserver.observe(skillsSection);
+            } else {
+                skillsSection.classList.add('in-view');
+            }
+        }
+
+        // Scrollspy - destaca o link do menu correspondente à seção visível
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = Array.from(navLinks)
+            .map(link => document.querySelector(link.getAttribute('href')))
+            .filter(Boolean);
+
+        if ('IntersectionObserver' in window && sections.length > 0) {
+            const spyObserver = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        animateSkillBars();
-                        skillsObserver.unobserve(entry.target);
+                        const id = '#' + entry.target.id;
+                        navLinks.forEach(link => {
+                            link.classList.toggle('active', link.getAttribute('href') === id);
+                        });
                     }
                 });
-            }, observerOptions);
-            
-            skillsObserver.observe(skillsSection);
+            }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+            sections.forEach(section => spyObserver.observe(section));
+        }
+
+        // Formulário de contato - validação, feedback e proteção contra envio duplicado
+        const chatForm = document.getElementById('chatForm');
+        const chatSubmit = document.getElementById('chatSubmit');
+        const chatSubmitLabel = document.getElementById('chatSubmitLabel');
+        const chatResponse = document.getElementById('chatResponse');
+        const chatErrorGeneral = document.getElementById('chatErrorGeneral');
+        let isSubmitting = false;
+
+        function setFieldError(fieldId, message) {
+            const errorEl = document.getElementById(fieldId + '-error');
+            const inputEl = document.getElementById(fieldId);
+            if (errorEl) errorEl.textContent = message;
+            if (inputEl) inputEl.setAttribute('aria-invalid', message ? 'true' : 'false');
+        }
+
+        function validateForm(name, email, message) {
+            let valid = true;
+
+            if (!name.trim()) {
+                setFieldError('name', 'Informe seu nome.');
+                valid = false;
+            } else {
+                setFieldError('name', '');
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email.trim())) {
+                setFieldError('email', 'Informe um email válido.');
+                valid = false;
+            } else {
+                setFieldError('email', '');
+            }
+
+            if (!message.trim()) {
+                setFieldError('message', 'Escreva uma mensagem.');
+                valid = false;
+            } else {
+                setFieldError('message', '');
+            }
+
+            return valid;
+        }
+
+        if (chatForm) {
+            chatForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                if (isSubmitting) return;
+
+                chatResponse.classList.add('hidden');
+                chatErrorGeneral.classList.add('hidden');
+
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                if (!validateForm(name, email, message)) {
+                    chatErrorGeneral.classList.remove('hidden');
+                    return;
+                }
+
+                isSubmitting = true;
+                chatSubmit.disabled = true;
+                chatSubmitLabel.textContent = 'Enviando...';
+
+                try {
+                    const whatsappMessage = `Nome: ${name}%0AEmail: ${email}%0AMensagem: ${message}`;
+                    window.open(`https://wa.me/5586995137002?text=${whatsappMessage}`, '_blank', 'noopener,noreferrer');
+
+                    chatResponse.classList.remove('hidden');
+                    chatForm.reset();
+
+                    setTimeout(() => {
+                        chatResponse.classList.add('hidden');
+                    }, 5000);
+                } catch (err) {
+                    chatErrorGeneral.classList.remove('hidden');
+                } finally {
+                    setTimeout(() => {
+                        isSubmitting = false;
+                        chatSubmit.disabled = false;
+                        chatSubmitLabel.textContent = 'Enviar Mensagem';
+                    }, 2000);
+                }
+            });
         }
     </script>
 </body>
 </html>
-
