@@ -14,7 +14,10 @@ test('a integração preserva o HTML original exceto o loader aprovado', () => {
     .replace('  <script src="assets/js/motion-init.js"></script>', '  <script>' + read('assets/js/motion-init.js') + '</script>')
     .replace('  <script src="assets/js/site.js" defer></script>', '  <script>' + read('assets/js/site.js') + '  </script>')
     .replace(/  <script src="assets\/swarm\/swarm-adapter\.js" defer><\/script>\r?\n/, '')
-    .replace(/  <script src="assets\/js\/text-typing\.js" defer><\/script>\r?\n/, '');
+    .replace(/  <script src="assets\/js\/text-typing\.js" defer><\/script>\r?\n/, '')
+    .replace('  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon.png">', '  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 64 64\'%3E%3Crect width=\'64\' height=\'64\' rx=\'12\' fill=\'%23100d19\'/%3E%3Cpath d=\'M13 47 28 16h8l15 31h-9l-3-7H25l-3 7h-9Zm15-14h8l-4-9-4 9Z\' fill=\'%23c4a0ff\'/%3E%3C/svg%3E">')
+    .replaceAll('<img class="brand-mark" src="assets/images/aj-monogram.png" width="36" height="36" alt="" aria-hidden="true">', '<span class="brand-mark" aria-hidden="true">AJ</span>')
+    .replace('.brand-mark{display:block;width:36px;height:36px;flex:none;object-fit:contain}', '.brand-mark{display:grid;place-items:center;width:36px;height:36px;border:1px solid rgba(196,160,255,.55);border-radius:9px;color:var(--lilac);font-size:15px;letter-spacing:-.09em}');
   // The editor normalizes line endings; restore original Windows CRLF for comparison.
   const hash = createHash('sha256').update(html.replace(/\r?\n/g, '\r\n')).digest('hex');
   assert.equal(hash, '7e367b65efbbdc15bd3bf8c01a7f913d8eb388f1f7cee88d0f2f7701398951a0');
