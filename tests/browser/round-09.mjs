@@ -1,0 +1,14 @@
+const task=await taskSpace(1);const page=task.page('p1');const fs=await import('node:fs/promises');
+await page.cdp('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:false});
+await page.cdp('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'no-preference'}]});
+await page.evaluate(()=>{window.ArthonSwarm.start();document.getElementById('contact-name').scrollIntoView({behavior:'instant',block:'center'});});
+await page.waitForFunction(()=>{const e=document.getElementById('contact-name'),r=e.getBoundingClientRect();return r.top>80&&r.bottom<innerHeight&&getComputedStyle(e.closest('.contact-card')).opacity==='1'});
+await page.fill('#contact-name','Teste local');await page.fill('#contact-email','invalido');
+const form=await page.evaluate(()=>({name:document.getElementById('contact-name').value,emailValid:document.getElementById('contact-email').checkValidity(),active:window.ArthonSwarm.active,overflow:document.documentElement.scrollWidth>innerWidth}));
+await page.evaluate(()=>[...document.body.children].find(e=>e.shadowRoot).shadowRoot.querySelector('button').focus());
+await page.keyboard.press('Enter');const buttonStopped=await page.evaluate(()=>!window.ArthonSwarm.active);
+await page.cdp('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]});
+const reduced=await page.evaluate(()=>({started:window.ArthonSwarm.start(),active:window.ArthonSwarm.active}));
+await page.cdp('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'no-preference'}]});await page.evaluate(()=>window.ArthonSwarm.start());
+await page.cdp('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]});const changed=await page.evaluate(()=>!window.ArthonSwarm.active);
+const report={form,buttonStopped,reduced,changed};await fs.writeFile('C:/Users/artho/Documents/Projetos AI/arthonjunieres.site/docs/evidence/interaction-results.json',JSON.stringify(report,null,2));console.log(report);await task.finish({keep:[]});

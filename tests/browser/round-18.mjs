@@ -1,0 +1,10 @@
+const task=await taskSpace(6);const page=task.page('p1');
+await page.cdp('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:false});
+await page.goto('http://127.0.0.1:8080/');
+await page.waitForFunction(()=>document.getElementById('hero-heading').dataset.typingState==='typing');
+await page.screenshot({path:'C:/Users/artho/Documents/Projetos AI/arthonjunieres.site/docs/evidence/typing-mobile.png'});
+const mobile=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth,active:window.ArthonTyping.active,original:document.getElementById('hero-heading').innerHTML}));
+await page.keyboard.press('Escape');
+const restored=await page.evaluate(()=>({active:window.ArthonTyping.active,highlights:CSS.highlights.size,text:document.getElementById('hero-heading').innerHTML}));
+console.log({mobile,restored});
+await task.finish({keep:[]});

@@ -1,0 +1,90 @@
+[
+  {
+    "selector": "#hero-heading",
+    "before": {
+      "text": "ArthonJunieres.",
+      "height": 189.46875
+    },
+    "after": {
+      "text": "ArthonJunieres.",
+      "height": 189.46875
+    }
+  },
+  {
+    "selector": ".hero-lead",
+    "before": {
+      "text": "Transformando operações complexas em decisões claras.",
+      "height": 76.53125
+    },
+    "after": {
+      "text": "Transformando operações complexas em decisões claras.",
+      "height": 76.53125
+    }
+  },
+  {
+    "selector": "#projects-heading",
+    "before": {
+      "text": "Projetos que conectamdados à ação.",
+      "height": 134.375
+    },
+    "after": {
+      "text": "Projetos que conectamdados à ação.",
+      "height": 134.375
+    }
+  },
+  {
+    "selector": "#about-heading",
+    "before": {
+      "text": "Da operaçãoà inovação.",
+      "height": 134.375
+    },
+    "after": {
+      "text": "Da operaçãoà inovação.",
+      "height": 134.375
+    }
+  },
+  {
+    "selector": "#cap-heading",
+    "before": {
+      "text": "Uma visão que atravessadisciplinas.",
+      "height": 134.375
+    },
+    "after": {
+      "text": "Uma visão que atravessadisciplinas.",
+      "height": 134.375
+    }
+  },
+  {
+    "selector": "#journey-heading",
+    "before": {
+      "text": "Experiência que constrói perspectiva.",
+      "height": 201.5625
+    },
+    "after": {
+      "text": "Experiência que constrói perspectiva.",
+      "height": 201.5625
+    }
+  },
+  {
+    "selector": "#contact-heading",
+    "before": {
+      "text": "Vamos construir algo mais claro.",
+      "height": 134.375
+    },
+    "after": {
+      "text": "Vamos construir algo mais claro.",
+      "height": 134.375
+    }
+  },
+  {
+    "selector": ".contact-lead",
+    "before": {
+      "text": "Tem um processo para simplificar, dados para transformar em decisões ou uma ideia para tirar do papel? Vamos conversar.",
+      "height": 73.125
+    },
+    "after": {
+      "text": "Tem um processo para simplificar, dados para transformar em decisões ou uma ideia para tirar do papel? Vamos conversar.",
+      "height": 73.125
+    }
+  }
+]

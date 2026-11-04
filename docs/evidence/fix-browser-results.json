@@ -1,0 +1,17 @@
+{
+  "native": {
+    "active": true,
+    "reduced": true,
+    "url": "http://127.0.0.1:8080/"
+  },
+  "stopped": true,
+  "automatic": {
+    "active": true,
+    "url": "http://127.0.0.1:8080/"
+  },
+  "mobile": {
+    "active": true,
+    "overflow": false
+  },
+  "disabled": true
+}

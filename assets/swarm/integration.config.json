@@ -1,0 +1,36 @@
+{
+  "status": "independent-implementation",
+  "enabled": true,
+  "implementation": "swarm-adapter.js",
+  "configurationRole": "documentation-only; runtime defaults are in the adapter",
+  "disableQuery": "?swarm=0",
+  "upstream": {
+    "repository": "https://github.com/DhvanilPatel/swarm-cursors",
+    "commit": "18fd2614ebea68e64f05a8d269d27de022d50cc9",
+    "entry": "swarm-rebuild/swarm.js",
+    "license": "No license granted; authorization pending",
+    "reuseAuthorized": false,
+    "vendored": false
+  },
+  "activation": {
+    "mode": "auto-on-load",
+    "autoStart": true,
+    "sound": false,
+    "mobileDefault": "enabled"
+  },
+  "accessibility": {
+    "respectReducedMotion": false,
+    "preserveNativeCursor": true,
+    "restoreFocusOnExit": true,
+    "escapeToExit": true,
+    "originalDomRemainsSemantic": true
+  },
+  "fallback": {
+    "keepOriginalPageInteractive": true,
+    "onError": "remove-overlay-and-restore-original"
+  },
+  "validation": {
+    "viewports": ["390x844", "1440x900"],
+    "originalHtmlSha256": "7e367b65efbbdc15bd3bf8c01a7f913d8eb388f1f7cee88d0f2f7701398951a0"
+  }
+}

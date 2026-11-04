@@ -1,0 +1,1 @@
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('scroll-reveal');

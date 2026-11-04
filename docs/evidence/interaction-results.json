@@ -1,0 +1,14 @@
+{
+  "form": {
+    "name": "Teste local",
+    "emailValid": false,
+    "active": true,
+    "overflow": false
+  },
+  "buttonStopped": true,
+  "reduced": {
+    "started": false,
+    "active": false
+  },
+  "changed": true
+}

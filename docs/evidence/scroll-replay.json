@@ -1,0 +1,13 @@
+{
+  "down": {
+    "y": 628,
+    "rects": 49,
+    "active": true
+  },
+  "up": {
+    "y": 233,
+    "rects": 34,
+    "active": true,
+    "buttons": []
+  }
+}

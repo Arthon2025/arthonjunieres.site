@@ -1,0 +1,17 @@
+const task=await taskSpace('arthon-scroll-replay-20261104');const page=task.page('p1');
+await page.cdp('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'no-preference'}]});
+await page.goto('http://127.0.0.1:8080/');
+console.log({spaceId:task.spaceId});
+await page.evaluate(()=>{window.__rectStrokes=0;const original=CanvasRenderingContext2D.prototype.stroke;CanvasRenderingContext2D.prototype.stroke=function(...args){if(this.lineWidth===1)window.__rectStrokes++;return original.apply(this,args);};});
+await page.mouse.move(600,450);
+await page.mouse.wheel(0,650,{label:'rolar página para baixo'});
+await page.waitForFunction(()=>scrollY>100&&window.__rectStrokes>10);
+const down=await page.evaluate(()=>({y:scrollY,rects:window.__rectStrokes,active:window.ArthonSwarm.active}));
+await page.evaluate(()=>{window.__rectStrokes=0;});
+await page.mouse.wheel(0,-450,{label:'rolar página para cima'});
+await page.waitForFunction(()=>window.__rectStrokes>10);
+const up=await page.evaluate(()=>({y:scrollY,rects:window.__rectStrokes,active:window.ArthonSwarm.active,buttons:[...document.body.children].filter(e=>e.shadowRoot).flatMap(e=>[...e.shadowRoot.querySelectorAll('button')].map(b=>b.textContent))}));
+console.log({down,up});
+await page.screenshot({path:'C:/Users/artho/Documents/Projetos AI/arthonjunieres.site/docs/evidence/scroll-replay.png'});
+const fs=await import('node:fs/promises');await fs.writeFile('C:/Users/artho/Documents/Projetos AI/arthonjunieres.site/docs/evidence/scroll-replay.json',JSON.stringify({down,up},null,2));
+await task.finish({keep:[]});

@@ -1,0 +1,18 @@
+{
+  "contract": "docs/swarm-integration.plan.md: preserve original portfolio, opt-in independent decoration; original DOM interactive; see docs/swarm-validation.md for limits",
+  "targetViewports": ["390x844", "1440x900"],
+  "accessibility": { "status": "pass", "evidence": "New decoration only: canvas aria-hidden, native stop button min-height 44px and visible focus style. Enter on focused stop button and Escape stop session in real browser. Reduced-motion blocks automatic start; explicit native Play button was clicked in Ego under unchanged reduced preference and started the effect. Escape stops. Form remains editable. This is not a whole-page WCAG audit." },
+  "responsive": { "status": "pass", "evidence": "Captured both targets with active effect. Heading/portrait/project rectangles identical to opt-out measurements; no added horizontal overflow. Narrow view tested with fine pointer; actual coarse input is intentionally disabled." },
+  "contentStates": {
+    "loading": { "status": "not-applicable", "reason": "Local deferred synchronous script; no async animation assets or loading UI. Page never hidden." },
+    "empty": { "status": "pass", "evidence": "Idle agents orbit without needing tasks; real content is not removed. Tests advance beyond all completed tasks." },
+    "error": { "status": "pass", "evidence": "Unit test verifies absent 2D context returns inactive without inserting any overlay; exceptions have cleanup but exception branches remain unforced." },
+    "partial": { "status": "not-applicable", "reason": "No snapshot, cloned content or capture of remote media; animation draws geometric decorations over real content." },
+    "success": { "status": "pass", "evidence": "Opt-in active screenshots; Escape and Enter on stop button remove layer. Interaction JSON confirms active false on stop." },
+    "permission": { "status": "not-applicable", "reason": "Independent code with no upstream assets, permission prompts, privileged APIs or data transmission." }
+  },
+  "renderedEvidence": [
+    { "viewport": "390x844", "artifact": "fixed-mobile.png", "observation": "Original narrow portfolio preserved; optional transparent cursors and stop control visible. Compared measured layout against baseline." },
+    { "viewport": "1440x900", "artifact": "fixed-desktop.png", "observation": "Original desktop hero, portrait, navigation and lilac styling preserved; cursors and top edge tracing visible without covering content." }
+  ]
+}
