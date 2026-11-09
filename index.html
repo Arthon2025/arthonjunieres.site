@@ -24,6 +24,7 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Arthon Junieres","url":"https://arthonjunieres.site/","image":"https://i.postimg.cc/Dw1w1cGp/1-1.jpg","jobTitle":"Analista de Processos e Dados no Setor Elétrico","email":"mailto:arthonjuny@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Piripiri","addressRegion":"PI","addressCountry":"BR"},"sameAs":["https://www.linkedin.com/in/arthonjunieres"]}</script>
   <script src="assets/js/motion-init.js"></script>
   <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/js/lanyard.css">
 </head>
 <body>
   <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
@@ -47,10 +48,9 @@
           <div class="hero-actions"><a class="button button-primary" href="#projetos">Explorar projetos <span class="arrow" aria-hidden="true">↗</span></a><a class="button button-secondary" href="#contato">Entrar em contato <span class="arrow" aria-hidden="true">→</span></a></div>
           <p class="hero-note">Piripiri, Piauí · Brasil</p>
         </div>
-        <div class="hero-visual" aria-label="Retrato de Arthon Junieres">
-          <div class="visual-frame"><div class="portrait"><img src="https://i.postimg.cc/Dw1w1cGp/1-1.jpg" alt="Arthon Junieres" fetchpriority="high"><div class="portrait-caption"><b>Entre dados e operações.</b><span>Tecnologia aplicada ao mundo real.</span></div></div></div>
-          <div class="orbit-label" aria-hidden="true">[ OPERAR ↗ EVOLUIR ]</div>
-          <div class="floating-panel" aria-hidden="true"><span class="mini-label">Foco de atuação</span><strong>01 / 03</strong><p>Processos · dados · soluções digitais</p></div>
+        <div class="hero-visual lanyard-visual" aria-label="Retrato de Arthon Junieres">
+          <div class="lanyard-stage"><div id="portfolio-lanyard" class="portfolio-lanyard" role="img" aria-label="Crachá de Arthon Junieres em cordão roxo. Arraste para movimentar e clique para virar."><img class="portfolio-lanyard-fallback" src="assets/images/card-front.png" alt="Arthon Junieres — Dados, Automação e Operação" width="800" height="1125"><div class="portfolio-lanyard-mount"></div></div></div><p class="lanyard-instructions">Arraste para movimentar · Clique para virar</p>
+
         </div>
       </div>
     </section>
@@ -79,5 +79,6 @@
   <script src="assets/js/site.js" defer></script>
   <script src="assets/swarm/swarm-adapter.js" defer></script>
   <script src="assets/js/text-typing.js" defer></script>
+  <script type="module" src="assets/js/lanyard.js"></script>
 </body>
 </html>
